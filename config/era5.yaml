@@ -1,0 +1,6 @@
+extends: xm-example.yaml
+run:
+  id: era5-example
+  label: "XM + ERA5 hybrid; source seven-hub fleet is still illustrative"
+climate:
+  mode: era5

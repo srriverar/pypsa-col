@@ -1,0 +1,13 @@
+extends: default.yaml
+run:
+  id: physical-candidate
+  label: "Unvalidated OSM physical candidate — build topology only, not a solved SIN study"
+network:
+  mode: physical
+inputs:
+  mode: xm_mapped
+investment:
+  demo_fixed_renewables_mw: {}
+  candidates: []
+storage:
+  batteries: []

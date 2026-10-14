@@ -1,0 +1,4 @@
+metric,entity,entity_code,unit,timezone,timestamp,value
+VoluUtilDiarEner,Sistema,Sistema,kWh,America/Bogota,2023-12-31,12185861500.0
+VoluUtilDiarEner,Sistema,Sistema,kWh,America/Bogota,2024-01-01,12161276400.0
+VoluUtilDiarEner,Sistema,Sistema,kWh,America/Bogota,2024-01-02,12100516400.0

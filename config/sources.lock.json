@@ -1,0 +1,68 @@
+{
+  "colombiacongestionV2": {
+    "url": "https://github.com/srriverar/colombiacongestionV2.git",
+    "commit": "a6fcf7622249f555d81e293a11f05b8a6aee7c39",
+    "files": {
+      ".devcontainer/devcontainer.json": "c4e050630976d023f100cf41da7cf96219ea35ea33920f076a69572f77e6cb02",
+      ".gitignore": "759b5e9abe73d9110d43ba804e012d1605c8f403c27509352f06a72aac3c09f7",
+      ".streamlit/config.toml": "e67a9db8243eddc0423e49eac4eed165cc2a2e612b63ee7b95b5c194feffeb9f",
+      "DESPLIEGUE.md": "a3fd2a2d7feae17c912e548ac9d5d764dece98fa2e9ba615f71914dd3c5582d4",
+      "README.md": "4c190c4f749ad3670b1d9642fd1cb70ea7c867a45267e4891f0c1351dfb0c8da",
+      "app.py": "1c8a9d7b82e063d091ef52868db86127f5212c8a31c91f5bb8d24b91fe78eaf7",
+      "data/catalogo_geodata.json": "6c783c809c1e1ee2757f655aa1a836a63c83c5540a710e67ef8a085088dcc04f",
+      "data/colombia_grid_poster.png": "1fd0c192189517fb2669f686276c366621b29cdfd6682f6c9ec1e01334381f44",
+      "data/geo/centrales_osm.geojson": "fd972782292750b57ca0d099222920e68dd9f05609e89ba58df1a41d76023b13",
+      "data/geo/kpis_osm.json": "4af32a77d5389e5ecb8c70996015ff007798e22f9960521d104a481e1b3c58d6",
+      "data/geo/lineas_osm.geojson": "d77184d54b5c7f7e1a61fcd1d70133e32a96cdbb5d910429cf2118822885ef68",
+      "data/geo/subestaciones_osm.geojson": "c9eae2d236d1d78126ef09f522783f3b17ec5d1486eacf92c42f054c57dca6ef",
+      "data/reference/colombia_boundary.geojson": "689f7e767db1d8b07babfa35f81b8f9ae9006fd3d79e8da041658dcc88920817",
+      "data/reference/colombia_boundary_full.geojson": "fe41a5cd90b5059495bcd843bbc15811ee65a1098d14063f3b0b4238bf9ad553",
+      "data/reference/san_andres_boundary.geojson": "8aec6272e8e1899c19f36a6d86b8053d6718706e1e5a5d527ceb2b4a2d9128ba",
+      "data/reference/san_andres_power.geojson": "69670304ad6bf2c611bc95c627bf7b626fecd85fa2e5ef81fdfaaf2db2abd9e9",
+      "doc/CATALOGO_GEODATA_COLOMBIA.md": "39f218c8522aef375a2bbfca004a5d3993857009c7f8fdd73c2543c9a392536d",
+      "requirements.txt": "8ff51b1a74b2418cca619717c6dee164061a9aeb0b7fa8097efe4ede1926c244",
+      "tools/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tools/arcgis_fetch.py": "9f709b67be88550e522f5821abfc0950ed312175ba1a1add683cf210d770684d",
+      "tools/build_osm_snapshot.py": "a52511516bd8b9e386867c0ee299021105813754e8efb74fee504d02c1647853",
+      "tools/geo_utils.py": "71f9c923dfcc2fcfe3b3b8f2cbea7d9fbbf4aa3740bf3ffe998514da600c384f",
+      "tools/geodata_catalog.py": "a7bf2d300df40dfbec86dec0270e53232710b5b4aa00c3fe339e83cf6f014eac",
+      "tools/gis_data.py": "6bdfba7544288a3ab901cba0e644522d9887e7a621d8e5bdbc5447beae7940d3",
+      "tools/grid2poster_col.py": "35513c547fda618923cfeb641749cb473f0f408ff05259f701c27c0c7fb502a5",
+      "tools/paratec_join.py": "f300be4b7202e0ce04ddd324fbaf065dd7d2cd291c8f64a543d2fb34e946350c",
+      "tools/themes/LICENSE_grid2poster.txt": "37e66398ebd78812ad62ddfc43a4312c029feb22e0b42779ea089bd1bf4244ab",
+      "tools/themes/aurora_grid.json": "9852e241dac26bb55a5cd64b3a59b7f47a75a32ee3ba974a56babd1b2cc3702c",
+      "tools/themes/blackout.json": "b69b55d9496c73b6b2876796af18752b5708398a07458efa68b9758ef26434b8",
+      "tools/themes/blueprint.json": "c7bee9f235dbd9e77fa5e591b00f47e4ada0a37303da3fbab714a6817b63348e",
+      "tools/themes/classical_map.json": "720408f72f72c8c04f9694c0aff1e3b133e401a0211f852cc05a3cc1f1d27015",
+      "tools/themes/copper_patina.json": "cd8e368192e76d8f61ea27a29828f43e30e2ca8c56ef9a24d8206cccabeb1bf4",
+      "tools/themes/electric_midnight.json": "f568583c1370b8f10d7e6e6e676ceed6df32ca128d638c4f26bec85d43eb688e",
+      "tools/themes/emerald.json": "4bf05398a256e24b07dc779b2b5addaf7cf8daf290f846a6db78052772da6c53",
+      "tools/themes/glow_in_the_dark.json": "4d4bd006568b6dc53f1c5589fad5f2103b8dc9d7dd01c250d5ab47b7e4b31df1",
+      "tools/themes/japanese_ink.json": "c13da5d6bbe831d5c8171a498bbd05e93a4e391462e10a4ec1b29f74a1872d69",
+      "tools/themes/midnight_blue.json": "56fd897677c62f0989b9b906700325351bd0c95068fd4e68e5b75e353028d952",
+      "tools/themes/monochrome_paper.json": "ac298bb23045763156e263e6c28923be11f735fb917e4d0728f606350812967b",
+      "tools/themes/neon_cyberpunk.json": "b7c7e3c2907d7e9cf1f38b08ece7fe3cd9ec3535598a3aedc7cf65085bc378ee",
+      "tools/themes/noir.json": "657b3777f4e829b46c3eac283cef8558a40e2dc1aa3da2da9f6e1ec05186cfe3",
+      "tools/themes/ocean.json": "5bf95783dc22159815062cb7c4db59f9c6519fcd63f70f839a1bb7f701ab61d3",
+      "tools/themes/paper_grid.json": "bd86ecfd550fee6099c9d6b3c6910fec513cb5273ef425560d93fe8eb8a9fabe",
+      "tools/themes/signal_nights.json": "faffb038a21bf6614d8b0b990b4285d1392d62864d0e597e778319776d6830cc",
+      "tools/themes/sunset.json": "6052a20151934168943ac89567c76a1d09dd786a46d04eccd8a64fdf83d76a19",
+      "tools/themes/terracotta.json": "d82231ce349bbc8018365f50a4cf45a1a9854cf3bafd687bc77e2f64c1bc639f"
+    }
+  },
+  "API_XM": {
+    "url": "https://github.com/EquipoAnaliticaXM/API_XM.git",
+    "commit": "ee9d7cf10c5e4f0210d955055d2a078f426fc439"
+  },
+  "grid2poster": {
+    "url": "https://github.com/open-energy-transition/grid2poster.git",
+    "commit": "69673e58b65472ba90a580c77b8ea7b902001dd0",
+    "usage": "Use the pinned Colombian offline adaptation and its 18 MIT theme files; upstream inspected for schema and rendering conventions."
+  },
+  "dashboard-sin-nodal": {
+    "url": "https://github.com/srriverar/dashboard-sin-nodal.git",
+    "commit": "514cc091932502056692d264fc0ade27cd62c786",
+    "role": "Plant catalog conventions, 7 declared subregions, demand shares, Generacion/Demanda/explorador-de-planta UI contract. Not imported at runtime.",
+    "app": "https://dashboard-sin-nodal.streamlit.app/"
+  }
+}

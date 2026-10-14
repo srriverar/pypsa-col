@@ -1,0 +1,30 @@
+{
+  "Metric": {
+    "Id": "CapEfecNeta",
+    "Name": "Capacidad Efectiva Neta por Recurso",
+    "StartDate": "2023-12-31T00:00:00",
+    "EndDate": "2024-01-02T00:00:00"
+  },
+  "Items": [
+    {
+      "Date": "2023-12-31",
+      "DailyEntities": [
+        {
+          "Id": "Recurso",
+          "Code": "2QBW",
+          "Value": "19900.00000"
+        }
+      ]
+    },
+    {
+      "Date": "2023-12-31",
+      "DailyEntities": [
+        {
+          "Id": "Recurso",
+          "Code": "2QEK",
+          "Value": "35000.00000"
+        }
+      ]
+    }
+  ]
+}

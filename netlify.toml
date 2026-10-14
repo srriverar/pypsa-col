@@ -1,0 +1,21 @@
+# PyPSA-col — static Netlify site
+# Publish the prebuilt `site/` folder. There is no Node/Python build on Netlify:
+# HiGHS / PyPSA cannot run in Netlify Functions.
+#
+# Drag-and-drop: upload the `site/` directory (not the repo root).
+# Git-connected: set Publish directory = site, leave Build command empty.
+
+[build]
+  publish = "site"
+  command = "echo 'static site — no build'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

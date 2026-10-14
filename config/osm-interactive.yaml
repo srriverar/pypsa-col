@@ -1,0 +1,17 @@
+extends: default.yaml
+run:
+  id: osm-interactive
+  label: "OSM worldwide extract (Colombia) + XM/dashboard plants, interactive n.explore"
+network:
+  mode: physical
+  voltages_kv: [220, 230, 500]
+  endpoint_snap_m: 250
+  substation_snap_m: 1500
+  transformers: null
+  line_overrides: null
+  busmap: null
+inputs:
+  mode: dashboard_xm
+  xm_dir: data/processed/xm
+xm:
+  offline: true

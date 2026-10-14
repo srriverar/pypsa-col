@@ -1,0 +1,126 @@
+metric,entity,entity_code,unit,timezone,timestamp,value
+AporEner,Rio,A. SAN LORENZO,kWh,America/Bogota,2023-12-31,4107400.0
+AporEner,Rio,ALTOANCHICAYA,kWh,America/Bogota,2023-12-31,5138700.0
+AporEner,Rio,AMOYA,kWh,America/Bogota,2023-12-31,1787100.0
+AporEner,Rio,BATA,kWh,America/Bogota,2023-12-31,2561400.0
+AporEner,Rio,BETANIA CP,kWh,America/Bogota,2023-12-31,1834700.0
+AporEner,Rio,BOGOTA N.R.,kWh,America/Bogota,2023-12-31,5170800.0
+AporEner,Rio,CALIMA,kWh,America/Bogota,2023-12-31,489500.0
+AporEner,Rio,CAMPOALEGRE,kWh,America/Bogota,2023-12-31,664100.0
+AporEner,Rio,CARLOS LLERAS,kWh,America/Bogota,2023-12-31,2949400.0
+AporEner,Rio,CAUCA SALVAJINA,kWh,America/Bogota,2023-12-31,10008600.0
+AporEner,Rio,CHINCHINA,kWh,America/Bogota,2023-12-31,1523000.0
+AporEner,Rio,CHUZA,kWh,America/Bogota,2023-12-31,2096800.0
+AporEner,Rio,CONCEPCION,kWh,America/Bogota,2023-12-31,1094100.0
+AporEner,Rio,CUCUANA,kWh,America/Bogota,2023-12-31,759400.0
+AporEner,Rio,DESV. BATATAS,kWh,America/Bogota,2023-12-31,591800.0
+AporEner,Rio,DESV. CHIVOR,kWh,America/Bogota,2023-12-31,441500.0
+AporEner,Rio,"DESV. EEPPM (NEC,PAJ,DOL)",kWh,America/Bogota,2023-12-31,1536300.0
+AporEner,Rio,DESV. GUARINO,kWh,America/Bogota,2023-12-31,127000.0
+AporEner,Rio,DESV. MANSO,kWh,America/Bogota,2023-12-31,100100.0
+AporEner,Rio,DESV. SAN MARCOS,kWh,America/Bogota,2023-12-31,172700.0
+AporEner,Rio,DIGUA,kWh,America/Bogota,2023-12-31,520700.0
+AporEner,Rio,EL QUIMBO,kWh,America/Bogota,2023-12-31,8070000.0
+AporEner,Rio,ESCUELA DE MINAS,kWh,America/Bogota,2023-12-31,6366200.0
+AporEner,Rio,ESTRELLA,kWh,America/Bogota,2023-12-31,294200.0
+AporEner,Rio,FLORIDA II,kWh,America/Bogota,2023-12-31,307600.0
+AporEner,Rio,GRANDE,kWh,America/Bogota,2023-12-31,5037600.0
+AporEner,Rio,GUADALUPE,kWh,America/Bogota,2023-12-31,2645100.0
+AporEner,Rio,GUATAPE,kWh,America/Bogota,2023-12-31,2867900.0
+AporEner,Rio,GUAVIO,kWh,America/Bogota,2023-12-31,5785800.0
+AporEner,Rio,ITUANGO,kWh,America/Bogota,2023-12-31,41341400.0
+AporEner,Rio,MIEL I,kWh,America/Bogota,2023-12-31,3035800.0
+AporEner,Rio,NARE CP,kWh,America/Bogota,2023-12-31,3147500.0
+AporEner,Rio,PORCE III,kWh,America/Bogota,2023-12-31,780800.0
+AporEner,Rio,PORCE2 CP,kWh,America/Bogota,2023-12-31,2955100.0
+AporEner,Rio,PRADO,kWh,America/Bogota,2023-12-31,2277600.0
+AporEner,Rio,SAN CARLOS,kWh,America/Bogota,2023-12-31,4118700.0
+AporEner,Rio,SAN EUGENIO,kWh,America/Bogota,2023-12-31,742500.0
+AporEner,Rio,SAN FRANCISCO,kWh,America/Bogota,2023-12-31,237900.0
+AporEner,Rio,SAN MIGUEL,kWh,America/Bogota,2023-12-31,1464000.0
+AporEner,Rio,SINU URRA,kWh,America/Bogota,2023-12-31,2119400.0
+AporEner,Rio,SOGAMOSO,kWh,America/Bogota,2023-12-31,5298600.0
+AporEner,Rio,TENCHE,kWh,America/Bogota,2023-12-31,1084300.0
+AporEner,Rio,A. SAN LORENZO,kWh,America/Bogota,2024-01-01,3843500.0
+AporEner,Rio,ALTOANCHICAYA,kWh,America/Bogota,2024-01-01,3910200.0
+AporEner,Rio,AMOYA,kWh,America/Bogota,2024-01-01,2313300.0
+AporEner,Rio,BATA,kWh,America/Bogota,2024-01-01,1954400.0
+AporEner,Rio,BETANIA CP,kWh,America/Bogota,2024-01-01,1958400.0
+AporEner,Rio,BOGOTA N.R.,kWh,America/Bogota,2024-01-01,6309600.0
+AporEner,Rio,CALIMA,kWh,America/Bogota,2024-01-01,294000.0
+AporEner,Rio,CAMPOALEGRE,kWh,America/Bogota,2024-01-01,557800.0
+AporEner,Rio,CARLOS LLERAS,kWh,America/Bogota,2024-01-01,2423900.0
+AporEner,Rio,CAUCA SALVAJINA,kWh,America/Bogota,2024-01-01,9195500.0
+AporEner,Rio,CHINCHINA,kWh,America/Bogota,2024-01-01,1384100.0
+AporEner,Rio,CHUZA,kWh,America/Bogota,2024-01-01,1589000.0
+AporEner,Rio,CONCEPCION,kWh,America/Bogota,2024-01-01,1023400.0
+AporEner,Rio,CUCUANA,kWh,America/Bogota,2024-01-01,989200.0
+AporEner,Rio,DESV. BATATAS,kWh,America/Bogota,2024-01-01,674300.0
+AporEner,Rio,DESV. CHIVOR,kWh,America/Bogota,2024-01-01,382600.0
+AporEner,Rio,"DESV. EEPPM (NEC,PAJ,DOL)",kWh,America/Bogota,2024-01-01,1397500.0
+AporEner,Rio,DESV. GUARINO,kWh,America/Bogota,2024-01-01,1400.0
+AporEner,Rio,DESV. MANSO,kWh,America/Bogota,2024-01-01,63300.0
+AporEner,Rio,DESV. SAN MARCOS,kWh,America/Bogota,2024-01-01,229800.0
+AporEner,Rio,DIGUA,kWh,America/Bogota,2024-01-01,367500.0
+AporEner,Rio,EL QUIMBO,kWh,America/Bogota,2024-01-01,7855500.0
+AporEner,Rio,ESCUELA DE MINAS,kWh,America/Bogota,2024-01-01,6016500.0
+AporEner,Rio,ESTRELLA,kWh,America/Bogota,2024-01-01,130700.0
+AporEner,Rio,FLORIDA II,kWh,America/Bogota,2024-01-01,216200.0
+AporEner,Rio,GRANDE,kWh,America/Bogota,2024-01-01,4225100.0
+AporEner,Rio,GUADALUPE,kWh,America/Bogota,2024-01-01,2455700.0
+AporEner,Rio,GUATAPE,kWh,America/Bogota,2024-01-01,2675500.0
+AporEner,Rio,GUAVIO,kWh,America/Bogota,2024-01-01,5553300.0
+AporEner,Rio,ITUANGO,kWh,America/Bogota,2024-01-01,19795200.0
+AporEner,Rio,MIEL I,kWh,America/Bogota,2024-01-01,2596600.0
+AporEner,Rio,NARE CP,kWh,America/Bogota,2024-01-01,3277000.0
+AporEner,Rio,PORCE III,kWh,America/Bogota,2024-01-01,388100.0
+AporEner,Rio,PORCE2 CP,kWh,America/Bogota,2024-01-01,2582000.0
+AporEner,Rio,PRADO,kWh,America/Bogota,2024-01-01,1868400.0
+AporEner,Rio,SAN CARLOS,kWh,America/Bogota,2024-01-01,3229800.0
+AporEner,Rio,SAN EUGENIO,kWh,America/Bogota,2024-01-01,623800.0
+AporEner,Rio,SAN FRANCISCO,kWh,America/Bogota,2024-01-01,236900.0
+AporEner,Rio,SAN MIGUEL,kWh,America/Bogota,2024-01-01,1301900.0
+AporEner,Rio,SINU URRA,kWh,America/Bogota,2024-01-01,1888100.0
+AporEner,Rio,SOGAMOSO,kWh,America/Bogota,2024-01-01,5559800.0
+AporEner,Rio,TENCHE,kWh,America/Bogota,2024-01-01,581800.0
+AporEner,Rio,A. SAN LORENZO,kWh,America/Bogota,2024-01-02,3738900.0
+AporEner,Rio,ALTOANCHICAYA,kWh,America/Bogota,2024-01-02,3535400.0
+AporEner,Rio,AMOYA,kWh,America/Bogota,2024-01-02,1704200.0
+AporEner,Rio,BATA,kWh,America/Bogota,2024-01-02,1984400.0
+AporEner,Rio,BETANIA CP,kWh,America/Bogota,2024-01-02,1576600.0
+AporEner,Rio,BOGOTA N.R.,kWh,America/Bogota,2024-01-02,4913100.0
+AporEner,Rio,CALIMA,kWh,America/Bogota,2024-01-02,98000.0
+AporEner,Rio,CAMPOALEGRE,kWh,America/Bogota,2024-01-02,536500.0
+AporEner,Rio,CARLOS LLERAS,kWh,America/Bogota,2024-01-02,6176600.0
+AporEner,Rio,CAUCA SALVAJINA,kWh,America/Bogota,2024-01-02,8486600.0
+AporEner,Rio,CHINCHINA,kWh,America/Bogota,2024-01-02,1361500.0
+AporEner,Rio,CHUZA,kWh,America/Bogota,2024-01-02,923400.0
+AporEner,Rio,CONCEPCION,kWh,America/Bogota,2024-01-02,1029500.0
+AporEner,Rio,CUCUANA,kWh,America/Bogota,2024-01-02,630900.0
+AporEner,Rio,DESV. BATATAS,kWh,America/Bogota,2024-01-02,484000.0
+AporEner,Rio,DESV. CHIVOR,kWh,America/Bogota,2024-01-02,379500.0
+AporEner,Rio,"DESV. EEPPM (NEC,PAJ,DOL)",kWh,America/Bogota,2024-01-02,1379700.0
+AporEner,Rio,DESV. MANSO,kWh,America/Bogota,2024-01-02,114700.0
+AporEner,Rio,DESV. SAN MARCOS,kWh,America/Bogota,2024-01-02,149900.0
+AporEner,Rio,DIGUA,kWh,America/Bogota,2024-01-02,338200.0
+AporEner,Rio,EL QUIMBO,kWh,America/Bogota,2024-01-02,5829800.0
+AporEner,Rio,ESCUELA DE MINAS,kWh,America/Bogota,2024-01-02,5898700.0
+AporEner,Rio,ESTRELLA,kWh,America/Bogota,2024-01-02,134400.0
+AporEner,Rio,FLORIDA II,kWh,America/Bogota,2024-01-02,174600.0
+AporEner,Rio,GRANDE,kWh,America/Bogota,2024-01-02,5025900.0
+AporEner,Rio,GUADALUPE,kWh,America/Bogota,2024-01-02,2452800.0
+AporEner,Rio,GUATAPE,kWh,America/Bogota,2024-01-02,2639100.0
+AporEner,Rio,GUAVIO,kWh,America/Bogota,2024-01-02,3986700.0
+AporEner,Rio,ITUANGO,kWh,America/Bogota,2024-01-02,18800200.0
+AporEner,Rio,MIEL I,kWh,America/Bogota,2024-01-02,3068400.0
+AporEner,Rio,NARE CP,kWh,America/Bogota,2024-01-02,2975000.0
+AporEner,Rio,PORCE III,kWh,America/Bogota,2024-01-02,1107700.0
+AporEner,Rio,PORCE2 CP,kWh,America/Bogota,2024-01-02,2365000.0
+AporEner,Rio,PRADO,kWh,America/Bogota,2024-01-02,695000.0
+AporEner,Rio,SAN CARLOS,kWh,America/Bogota,2024-01-02,3278700.0
+AporEner,Rio,SAN EUGENIO,kWh,America/Bogota,2024-01-02,599800.0
+AporEner,Rio,SAN FRANCISCO,kWh,America/Bogota,2024-01-02,213600.0
+AporEner,Rio,SAN MIGUEL,kWh,America/Bogota,2024-01-02,1375500.0
+AporEner,Rio,SINU URRA,kWh,America/Bogota,2024-01-02,1760000.0
+AporEner,Rio,SOGAMOSO,kWh,America/Bogota,2024-01-02,4638200.0
+AporEner,Rio,TENCHE,kWh,America/Bogota,2024-01-02,842400.0

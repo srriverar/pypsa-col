@@ -1,0 +1,7 @@
+extends: default.yaml
+run:
+  id: el-nino
+  label: "Hypothetical El Nino stress test — NOT a calibrated historical reconstruction"
+hydro:
+  inflow_multiplier: 0.55
+  energy_budget_fraction: 0.55

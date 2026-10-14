@@ -1,0 +1,30 @@
+{
+  "Metric": {
+    "Id": "VoluUtilDiarEner",
+    "Name": "Volumen \u00datil diario Energ\u00eda por Embalse",
+    "StartDate": "2023-12-31T00:00:00",
+    "EndDate": "2024-01-02T00:00:00"
+  },
+  "Items": [
+    {
+      "Date": "2023-12-31",
+      "DailyEntities": [
+        {
+          "Id": "Embalse",
+          "Name": "AGREGADO BOGOTA",
+          "Value": 2538366700.0
+        }
+      ]
+    },
+    {
+      "Date": "2023-12-31",
+      "DailyEntities": [
+        {
+          "Id": "Embalse",
+          "Name": "ALTOANCHICAYA",
+          "Value": 11122500.0
+        }
+      ]
+    }
+  ]
+}

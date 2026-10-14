@@ -1,0 +1,6 @@
+extends: default.yaml
+run:
+  id: xm-example
+  label: "Hybrid demonstration — observed XM demand and hydrological ratios; illustrative fleet and spatial allocation"
+inputs:
+  mode: xm_hybrid

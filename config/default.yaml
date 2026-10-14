@@ -1,0 +1,97 @@
+run:
+  id: demo
+  label: "Seven-hub demonstration — synthetic demand, weather and hydrology"
+snapshots:
+  start: '2024-01-01 00:00'
+  end: '2024-01-02 23:00'
+  timezone: America/Bogota
+source:
+  path: external/colombiacongestionV2
+  lock: config/sources.lock.json
+network:
+  mode: seven_hub
+  voltages_kv: [220, 230, 500]
+  endpoint_snap_m: 250
+  substation_snap_m: 1500
+  transformers: null
+  line_overrides: null
+  busmap: null
+  expected_regions: 18
+inputs:
+  mode: demo
+  xm_dir: data/processed/xm
+  user_dir: data/user
+  demand_metric: DemaReal
+  allow_unreviewed: false
+xm:
+  start: '2023-12-31'
+  end: '2024-01-02'
+  raw_dir: data/raw/xm
+  processed_dir: data/processed/xm
+  timeout_seconds: 60
+  chunk_days: 30
+  offline: false
+  metrics:
+    - [DemaReal, Sistema]
+    - [DemaOR, Agente]
+    - [Gene, Sistema]
+    - [Gene, Recurso]
+    - [CapEfecNeta, Recurso]
+    - [DispoReal, Recurso]
+    - [VoluUtilDiarEner, Sistema]
+    - [VoluUtilDiarEner, Embalse]
+    - [CapaUtilDiarEner, Sistema]
+    - [CapaUtilDiarEner, Embalse]
+    - [PorcVoluUtilDiar, Embalse]
+    - [AporEner, Sistema]
+    - [AporEner, Rio]
+    - [PrecBolsNaci, Sistema]
+    - [ListadoRecursos, Sistema]
+    - [ListadoEmbalses, Sistema]
+    - [ListadoRios, Sistema]
+climate:
+  mode: synthetic
+  cutout: cutouts/colombia-2024-01.nc
+  sites: data/reference/renewable_sites.geojson
+  turbine: Vestas_V112_3MW
+  panel: CSi
+  pv_slope: 10.0
+  pv_azimuth: 180.0
+  dx: 0.25
+  dy: 0.25
+hydro:
+  demo_max_hours: 168
+  demo_initial_fraction: 0.60
+  demo_inflow_capacity_factor: 0.52
+  inflow_multiplier: 1.0
+  energy_budget_fraction: null
+  terminal: initial_min
+investment:
+  enabled: false
+  periods: [2026, 2028, 2030]
+  years: [2, 2, 1]
+  discount_rate: 0.05
+  demand_growth: 0.025
+  annualize_short_horizon: false
+  candidates:
+    - {name: Wind_Guajira, bus: La Guajira, carrier: wind, profile: wind_guajira, max_mw: 3000, overnight_usd_per_mw: 1400000, fom_fraction: 0.03, lifetime: 25}
+    - {name: Solar_Cesar, bus: Cesar, carrier: solar, profile: solar_cesar, max_mw: 2000, overnight_usd_per_mw: 650000, fom_fraction: 0.02, lifetime: 25}
+    - {name: Solar_Santander, bus: Bogota, carrier: solar, profile: solar_santander, max_mw: 1500, overnight_usd_per_mw: 650000, fom_fraction: 0.02, lifetime: 25}
+    # Santander is NOT a bus in the legacy seven-hub model. This demonstration
+    # delivers its profile at Bogota; replace with an approved electrical mapping.
+  demo_fixed_renewables_mw: {Wind_Guajira: 800, Solar_Cesar: 400, Solar_Santander: 200}
+storage:
+  batteries:
+    - {name: Battery_Bogota, bus: Bogota, p_nom: 100, max_hours: 4, efficiency_store: 0.92, efficiency_dispatch: 0.92}
+solver:
+  name: highs
+  threads: 1
+  allow_load_shedding: true
+  voll_usd_per_mwh: 10000
+  balance_tolerance_mw: 0.00001
+poster:
+  theme: electric_midnight
+  paper: a3
+  dpi: 130
+  include_zni_inset: true
+  congestion_overlay: true

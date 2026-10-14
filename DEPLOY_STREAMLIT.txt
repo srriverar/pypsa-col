@@ -1,0 +1,78 @@
+PyPSA-col — unzip, GitHub, Streamlit Cloud
+==========================================
+
+This zip is the Streamlit app (app.py) with HiGHS + the last-month XM tabs.
+It does NOT include .venv, results/, or the Netlify site/ folder.
+
+1) Unzip
+--------
+Windows: right-click pypsa-col-streamlit.zip → Extract All
+macOS/Linux:
+
+    unzip pypsa-col-streamlit.zip
+    cd pypsa-col
+
+2) Optional: run locally first
+------------------------------
+    python3 -m venv .venv
+    source .venv/bin/activate          # Windows: .venv\Scripts\activate
+    pip install -r requirements.txt
+    streamlit run app.py
+
+Open http://localhost:8501
+First tab = GUI (PyPSA-COL). Run all scenarios uses HiGHS.
+Generación / Demanda / Explorador download XM last 30 days (D-1).
+
+3) Create an empty GitHub repo
+------------------------------
+Browser: https://github.com/new
+- Repository name: pypsa-col
+- Public
+- Do NOT add README, .gitignore or license (the zip already has them)
+Create repository.
+
+4) Push
+-------
+    cd pypsa-col
+    git init
+    git add .
+    git status
+    git commit -m "PyPSA-col Streamlit app with HiGHS GUI"
+    git branch -M main
+    git remote add origin https://github.com/YOUR_USER/pypsa-col.git
+    git push -u origin main
+
+Use YOUR_USER. If GitHub asks to login, a personal access token is the password.
+
+5) Deploy on Streamlit Community Cloud
+--------------------------------------
+1. Go to https://share.streamlit.io  (sign in with GitHub)
+2. Create app
+3. Fill EXACTLY:
+
+   Repository        YOUR_USER/pypsa-col
+   Branch            main
+   Main file path    app.py
+
+4. Advanced settings (optional but recommended):
+   Python version    3.12
+
+5. Deploy. First build installs pypsa + highspy (3–5 min).
+   URL will look like https://pypsa-col.streamlit.app
+
+Do NOT set Main file to src/GUI.py or site/index.html.
+
+What must be in GitHub
+----------------------
+app.py
+requirements.txt
+packages.txt          (libgomp1 for HiGHS)
+runtime.txt           (python-3.12)
+.streamlit/config.toml
+src/pypsa_col/
+config/
+data/streamlit/       networks .nc + XM CSV + figures
+data/gui/
+
+Community Cloud RAM is ~1 GB. OSM 48 h dispatch fits.
+Do not run an 8760 h expansion on the free tier.

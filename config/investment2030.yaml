@@ -1,0 +1,15 @@
+extends: default.yaml
+run:
+  id: investment2030
+  label: "Illustrative 2026–2030 perfect-foresight expansion; 20% lower inflow; repeated 48-hour weather block"
+investment:
+  enabled: true
+  annualize_short_horizon: true
+  battery_candidates:
+    - {name: Battery_Caribe_New, bus: Caribe, max_new_mw: 500, max_hours: 4, efficiency_store: 0.92, efficiency_dispatch: 0.92, overnight_usd_per_mw: 900000, fom_fraction: 0.02, lifetime: 15}
+  transmission_candidates:
+    - {name: Colectora_Upgrade, from_link: Colectora, max_new_mw: 2000, overnight_usd_per_mw: 600000, fom_fraction: 0.01, lifetime: 40}
+    - {name: Cesar_Caribe_Upgrade, from_link: Cesar_Caribe, max_new_mw: 1000, overnight_usd_per_mw: 200000, fom_fraction: 0.01, lifetime: 40}
+hydro:
+  terminal: cyclic
+  inflow_multiplier: 0.8

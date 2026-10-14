@@ -1,0 +1,132 @@
+"""Run from repository root:
+  snakemake -s workflow/Snakefile --config study=config/demo.yaml --cores 2
+The study YAML supports relative inheritance via pypsa_col.io.load_config.
+"""
+from pathlib import Path
+import json
+import sys
+from pypsa_col.io import load_config
+
+STUDY = config.get("study", "config/demo.yaml")
+C = load_config(STUDY)
+RID = C["run"]["id"]
+P = f"resources/{RID}"
+R = f"results/{RID}"
+PYTHON = sys.executable
+CODE = [str(p) for p in Path("src/pypsa_col").glob("*.py")]
+PARAMETERS = json.dumps(C, sort_keys=True)
+LOCK = json.loads(Path(C["source"]["lock"]).read_text())["colombiacongestionV2"]
+SOURCEFILES = [str(Path(C["source"]["path"]) / p) for p in LOCK["files"]]
+XMFILES = ([f"{C['xm']['processed_dir']}/{m}__{e}.csv" for m, e in C["xm"]["metrics"]]
+           + [f"{C['xm']['processed_dir']}/manifest.json", f"{C['xm']['processed_dir']}/catalog.csv", f"{C['xm']['processed_dir']}/audit.json"]
+           if C["inputs"]["mode"] != "demo" else [])
+USERFILES = ([str(Path(C["inputs"]["user_dir"]) / f"{name}.csv") for name in
+              ["resource_busmap", "reservoir_map", "river_map", "load_weights"]]
+             if C["inputs"]["mode"] == "xm_mapped" else [])
+EXTRA_PROFILES = Path(C["inputs"]["user_dir"]) / "generator_profiles.csv"
+if EXTRA_PROFILES.exists() and C["inputs"]["mode"] == "xm_mapped":
+    USERFILES.append(str(EXTRA_PROFILES))
+TOPOLOGYFILES = [C["network"][key] for key in ["transformers", "line_overrides", "busmap"]
+                 if C["network"].get(key)]
+MODELFILES = [f"{P}/{name}.csv" for name in ["generators", "hydro", "demand", "inflow",
+               "generator_availability", "hydro_availability"]]
+
+rule all:
+    input:
+        f"{R}/report.html", f"{R}/summary.json", f"{R}/grid2poster.png",
+        f"{R}/grid2poster.pdf", f"{R}/grid2poster.svg", f"{R}/network.nc"
+
+rule source:
+    input:
+        SOURCEFILES, C["source"]["lock"], CODE
+    output:
+        "resources/source/inventory.json", "resources/source/buses.csv", "resources/source/links.csv",
+        "resources/source/generators.csv", "resources/source/load_weights.csv", "resources/source/routes.geojson"
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col audit-source --config {STUDY:q}"
+
+rule xm:
+    input:
+        CODE
+    output:
+        stamp=f"{P}/xm_ready.json", tables=XMFILES
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col download-xm --config {STUDY:q} --if-needed"
+
+if C["climate"]["mode"] == "era5":
+    rule cutout:
+        input:
+            C["climate"]["sites"], CODE
+        output:
+            C["climate"]["cutout"]
+        params:
+            signature=PARAMETERS
+        shell:
+            "{PYTHON:q} -m pypsa_col build-cutout --config {STUDY:q}"
+
+rule climate:
+    input:
+        sites=C["climate"]["sites"], code=CODE,
+        cutout=([C["climate"]["cutout"]] if C["climate"]["mode"] == "era5" else [])
+    output:
+        f"{P}/renewable_profiles.csv", f"{P}/climate_provenance.json"
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col build-profiles --config {STUDY:q}"
+
+rule base_network:
+    input:
+        rules.source.output, TOPOLOGYFILES, CODE
+    output:
+        f"{P}/base.nc", f"{P}/topology_report.json"
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col build-network --config {STUDY:q}"
+
+rule model_inputs:
+    input:
+        rules.base_network.output, rules.climate.output, rules.xm.output, USERFILES, CODE
+    output:
+        MODELFILES, f"{P}/input_provenance.json"
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col prepare-inputs --config {STUDY:q}"
+
+rule optimize:
+    input:
+        rules.base_network.output, rules.model_inputs.output, rules.climate.output, CODE
+    output:
+        f"{R}/network.nc", f"{R}/solver.json"
+    threads: C["solver"]["threads"]
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col solve --config {STUDY:q}"
+
+rule grid2poster:
+    input:
+        rules.optimize.output, rules.source.output, CODE
+    output:
+        f"{R}/grid2poster.png", f"{R}/grid2poster.pdf", f"{R}/grid2poster.svg", f"{R}/grid2poster.json"
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col poster --config {STUDY:q}"
+
+rule report:
+    input:
+        rules.optimize.output, rules.grid2poster.output, rules.model_inputs.output, CODE
+    output:
+        f"{R}/report.html", f"{R}/summary.json", f"{R}/dispatch.png",
+        f"{R}/energy_by_period.csv", f"{R}/active_capacities.csv", f"{R}/branches.csv"
+    params:
+        signature=PARAMETERS
+    shell:
+        "{PYTHON:q} -m pypsa_col report --config {STUDY:q}"

@@ -1,0 +1,17 @@
+extends: default.yaml
+run:
+  id: research
+  label: "User-reviewed physical network and XM resource/reservoir crosswalks"
+network:
+  mode: physical
+  transformers: data/user/transformers.csv
+  line_overrides: data/user/line_overrides.csv
+inputs:
+  mode: xm_mapped
+climate:
+  mode: era5
+storage:
+  batteries: []
+investment:
+  demo_fixed_renewables_mw: {}
+  candidates: []

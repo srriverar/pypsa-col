@@ -1,0 +1,73 @@
+metric,entity,entity_code,unit,timezone,timestamp,value
+VoluUtilDiarEner,Embalse,AGREGADO BOGOTA,kWh,America/Bogota,2023-12-31,2538366700.0
+VoluUtilDiarEner,Embalse,ALTOANCHICAYA,kWh,America/Bogota,2023-12-31,11122500.0
+VoluUtilDiarEner,Embalse,AMANI,kWh,America/Bogota,2023-12-31,217496100.0
+VoluUtilDiarEner,Embalse,BETANIA,kWh,America/Bogota,2023-12-31,98797800.0
+VoluUtilDiarEner,Embalse,CALIMA1,kWh,America/Bogota,2023-12-31,162944400.0
+VoluUtilDiarEner,Embalse,CHUZA,kWh,America/Bogota,2023-12-31,365071000.0
+VoluUtilDiarEner,Embalse,EL QUIMBO,kWh,America/Bogota,2023-12-31,664968800.0
+VoluUtilDiarEner,Embalse,ESMERALDA,kWh,America/Bogota,2023-12-31,849149400.0
+VoluUtilDiarEner,Embalse,GUAVIO,kWh,America/Bogota,2023-12-31,1015863100.0
+VoluUtilDiarEner,Embalse,ITUANGO,kWh,America/Bogota,2023-12-31,35105500.0
+VoluUtilDiarEner,Embalse,MIRAFLORES,kWh,America/Bogota,2023-12-31,332107700.0
+VoluUtilDiarEner,Embalse,MUNA,kWh,America/Bogota,2023-12-31,43170900.0
+VoluUtilDiarEner,Embalse,PENOL,kWh,America/Bogota,2023-12-31,3264060100.0
+VoluUtilDiarEner,Embalse,PLAYAS,kWh,America/Bogota,2023-12-31,51498100.0
+VoluUtilDiarEner,Embalse,PORCE II,kWh,America/Bogota,2023-12-31,75791300.0
+VoluUtilDiarEner,Embalse,PORCE III,kWh,America/Bogota,2023-12-31,47836500.0
+VoluUtilDiarEner,Embalse,PRADO,kWh,America/Bogota,2023-12-31,53542900.0
+VoluUtilDiarEner,Embalse,PUNCHINA,kWh,America/Bogota,2023-12-31,42436700.0
+VoluUtilDiarEner,Embalse,RIOGRANDE2,kWh,America/Bogota,2023-12-31,521425400.0
+VoluUtilDiarEner,Embalse,SALVAJINA,kWh,America/Bogota,2023-12-31,352096200.0
+VoluUtilDiarEner,Embalse,SAN LORENZO,kWh,America/Bogota,2023-12-31,397187700.0
+VoluUtilDiarEner,Embalse,TOPOCORO,kWh,America/Bogota,2023-12-31,861216500.0
+VoluUtilDiarEner,Embalse,TRONERAS,kWh,America/Bogota,2023-12-31,42724700.0
+VoluUtilDiarEner,Embalse,URRA1,kWh,America/Bogota,2023-12-31,141881500.0
+VoluUtilDiarEner,Embalse,AGREGADO BOGOTA,kWh,America/Bogota,2024-01-01,2533878200.0
+VoluUtilDiarEner,Embalse,ALTOANCHICAYA,kWh,America/Bogota,2024-01-01,8826100.0
+VoluUtilDiarEner,Embalse,AMANI,kWh,America/Bogota,2024-01-01,217463300.0
+VoluUtilDiarEner,Embalse,BETANIA,kWh,America/Bogota,2024-01-01,95157600.0
+VoluUtilDiarEner,Embalse,CALIMA1,kWh,America/Bogota,2024-01-01,163238200.0
+VoluUtilDiarEner,Embalse,CHUZA,kWh,America/Bogota,2024-01-01,362590700.0
+VoluUtilDiarEner,Embalse,EL QUIMBO,kWh,America/Bogota,2024-01-01,665249000.0
+VoluUtilDiarEner,Embalse,ESMERALDA,kWh,America/Bogota,2024-01-01,849761300.0
+VoluUtilDiarEner,Embalse,GUAVIO,kWh,America/Bogota,2024-01-01,1022181600.0
+VoluUtilDiarEner,Embalse,ITUANGO,kWh,America/Bogota,2024-01-01,35451500.0
+VoluUtilDiarEner,Embalse,MIRAFLORES,kWh,America/Bogota,2024-01-01,329181300.0
+VoluUtilDiarEner,Embalse,MUNA,kWh,America/Bogota,2024-01-01,41648000.0
+VoluUtilDiarEner,Embalse,PENOL,kWh,America/Bogota,2024-01-01,3243821100.0
+VoluUtilDiarEner,Embalse,PLAYAS,kWh,America/Bogota,2024-01-01,46031100.0
+VoluUtilDiarEner,Embalse,PORCE II,kWh,America/Bogota,2024-01-01,81459400.0
+VoluUtilDiarEner,Embalse,PORCE III,kWh,America/Bogota,2024-01-01,52237000.0
+VoluUtilDiarEner,Embalse,PRADO,kWh,America/Bogota,2024-01-01,55255000.0
+VoluUtilDiarEner,Embalse,PUNCHINA,kWh,America/Bogota,2024-01-01,38410700.0
+VoluUtilDiarEner,Embalse,RIOGRANDE2,kWh,America/Bogota,2024-01-01,523968800.0
+VoluUtilDiarEner,Embalse,SALVAJINA,kWh,America/Bogota,2024-01-01,358111600.0
+VoluUtilDiarEner,Embalse,SAN LORENZO,kWh,America/Bogota,2024-01-01,397477300.0
+VoluUtilDiarEner,Embalse,TOPOCORO,kWh,America/Bogota,2024-01-01,863706100.0
+VoluUtilDiarEner,Embalse,TRONERAS,kWh,America/Bogota,2024-01-01,34338100.0
+VoluUtilDiarEner,Embalse,URRA1,kWh,America/Bogota,2024-01-01,141833400.0
+VoluUtilDiarEner,Embalse,AGREGADO BOGOTA,kWh,America/Bogota,2024-01-02,2530979400.0
+VoluUtilDiarEner,Embalse,ALTOANCHICAYA,kWh,America/Bogota,2024-01-02,6135300.0
+VoluUtilDiarEner,Embalse,AMANI,kWh,America/Bogota,2024-01-02,211495500.0
+VoluUtilDiarEner,Embalse,BETANIA,kWh,America/Bogota,2024-01-02,94986800.0
+VoluUtilDiarEner,Embalse,CALIMA1,kWh,America/Bogota,2024-01-02,163336200.0
+VoluUtilDiarEner,Embalse,CHUZA,kWh,America/Bogota,2024-01-02,359460400.0
+VoluUtilDiarEner,Embalse,EL QUIMBO,kWh,America/Bogota,2024-01-02,657976600.0
+VoluUtilDiarEner,Embalse,ESMERALDA,kWh,America/Bogota,2024-01-02,851394100.0
+VoluUtilDiarEner,Embalse,GUAVIO,kWh,America/Bogota,2024-01-02,1025029100.0
+VoluUtilDiarEner,Embalse,ITUANGO,kWh,America/Bogota,2024-01-02,34825500.0
+VoluUtilDiarEner,Embalse,MIRAFLORES,kWh,America/Bogota,2024-01-02,326521000.0
+VoluUtilDiarEner,Embalse,MUNA,kWh,America/Bogota,2024-01-02,43478100.0
+VoluUtilDiarEner,Embalse,PENOL,kWh,America/Bogota,2024-01-02,3224685200.0
+VoluUtilDiarEner,Embalse,PLAYAS,kWh,America/Bogota,2024-01-02,50788100.0
+VoluUtilDiarEner,Embalse,PORCE II,kWh,America/Bogota,2024-01-02,61785000.0
+VoluUtilDiarEner,Embalse,PORCE III,kWh,America/Bogota,2024-01-02,68210700.0
+VoluUtilDiarEner,Embalse,PRADO,kWh,America/Bogota,2024-01-02,55791900.0
+VoluUtilDiarEner,Embalse,PUNCHINA,kWh,America/Bogota,2024-01-02,34414600.0
+VoluUtilDiarEner,Embalse,RIOGRANDE2,kWh,America/Bogota,2024-01-02,513666400.0
+VoluUtilDiarEner,Embalse,SALVAJINA,kWh,America/Bogota,2024-01-02,363446300.0
+VoluUtilDiarEner,Embalse,SAN LORENZO,kWh,America/Bogota,2024-01-02,384815900.0
+VoluUtilDiarEner,Embalse,TOPOCORO,kWh,America/Bogota,2024-01-02,853540700.0
+VoluUtilDiarEner,Embalse,TRONERAS,kWh,America/Bogota,2024-01-02,42558500.0
+VoluUtilDiarEner,Embalse,URRA1,kWh,America/Bogota,2024-01-02,141195100.0

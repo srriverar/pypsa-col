@@ -1,0 +1,500 @@
+{
+  "retrieved_or_replayed_at_utc": "2026-10-13T02:34:04.234517+00:00",
+  "window": [
+    "2023-12-31",
+    "2024-01-02"
+  ],
+  "timezone": "America/Bogota",
+  "hour_convention": "Hour01 = [00:00,01:00)",
+  "list_warning": "Lists are current snapshots, NOT historical plant registries.",
+  "datasets": [
+    {
+      "metric": "DemaReal",
+      "entity": "Sistema",
+      "rows": 72,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "8ebb1110935818cc2cff3ec9150f904db08da5a0abd5a885abbd069d95de4eca",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "DemaOR",
+      "entity": "Agente",
+      "rows": 1944,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "9bf18bc46725e906768ccb0c5b5d5a7bdb3ef782241d90b1b914c4901a549183",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "Gene",
+      "entity": "Sistema",
+      "rows": 72,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "faf63275b76ec39381fc328c51c784c86770598466e591654e7e063b379f1605",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "Gene",
+      "entity": "Recurso",
+      "rows": 17112,
+      "missing_values": 3534,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "12602a7fbd3d984721dd4f3597f4ea96c4cbb583e75127aadb971af7be370ca7",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "CapEfecNeta",
+      "entity": "Recurso",
+      "rows": 1665,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "430459ea8bde7bb9148b928ab09fdac40a6913380a2184abae73078661aea887",
+      "units": [
+        "kW"
+      ]
+    },
+    {
+      "metric": "DispoReal",
+      "entity": "Recurso",
+      "rows": 21072,
+      "missing_values": 16409,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "121677735a6b0e1843de64a029c8364d92311c31d3a36130b83bcad756b884af",
+      "units": [
+        "kW"
+      ]
+    },
+    {
+      "metric": "VoluUtilDiarEner",
+      "entity": "Sistema",
+      "rows": 3,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "9c7e7077799f74d5d04086a74889f47c7e2dadebbb02edcaf82c2f6bd22e9be1",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "VoluUtilDiarEner",
+      "entity": "Embalse",
+      "rows": 72,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "7cb0854f1f2c40798f433e01c843b8e907e6c8c708afe455f90537cf4835dd4e",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "CapaUtilDiarEner",
+      "entity": "Sistema",
+      "rows": 3,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "fd9c7c6baf9fd5150cca63260fdfe183380164d1b109161b6296b968ea65916c",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "CapaUtilDiarEner",
+      "entity": "Embalse",
+      "rows": 72,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "27fe2ba8e0dd40923c40a21ab92202b8a856529540877ec177711624c30b8d8d",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "PorcVoluUtilDiar",
+      "entity": "Embalse",
+      "rows": 72,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "802161eaaa2c586429c591dcd292997cd412f900236ecc511b170099f7a0519a",
+      "units": [
+        "%"
+      ]
+    },
+    {
+      "metric": "AporEner",
+      "entity": "Sistema",
+      "rows": 3,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "8c8c4a46821a414d327a902a5412040d90a80e1464cdf2eda490edf15f09a98b",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "AporEner",
+      "entity": "Rio",
+      "rows": 125,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "809a269b24116ef5e5fd0263b129e5502a50cc10e20ab8f1e35056ec1a295db5",
+      "units": [
+        "kWh"
+      ]
+    },
+    {
+      "metric": "PrecBolsNaci",
+      "entity": "Sistema",
+      "rows": 72,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "6583d9123e7d334cc3a44c4339afbdd80c0a5a6f56d56dc11ad838f382392891",
+      "units": [
+        "COP/kWh"
+      ]
+    },
+    {
+      "metric": "ListadoRecursos",
+      "entity": "Sistema",
+      "rows": 2479,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 2,
+      "sha256": "d84dda4c430bc158c21877a128698d1326a5f998343a9c8211f22b528ae64f1b",
+      "units": [
+        ""
+      ]
+    },
+    {
+      "metric": "ListadoEmbalses",
+      "entity": "Sistema",
+      "rows": 25,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 6,
+      "sha256": "0f154660d82167a16256f62243d7b81d04015b2a4ff06af2f045c413547e482b",
+      "units": [
+        ""
+      ]
+    },
+    {
+      "metric": "ListadoRios",
+      "entity": "Sistema",
+      "rows": 43,
+      "missing_values": 0,
+      "exact_list_duplicates_removed": 0,
+      "sha256": "b0c1c2e9c08909a92de46c2a209fad5a94e73c725e7385de2384d4c54671a6ff",
+      "units": [
+        ""
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://servapibi.xm.com.co/Lists",
+      "request": {
+        "MetricId": "ListadoMetricas"
+      },
+      "retrieved_at_utc": "2026-10-13T01:57:48.247157+00:00",
+      "http_status": 200,
+      "sha256": "f1cc04a77a450db4a5e2b377650defdb597d9d2803e5e5c6492b722a0bbd8a0b",
+      "raw_path": "ListadoMetricas/b7c21bd1450374e64d7a.json",
+      "bytes": 84852
+    },
+    {
+      "url": "https://servapibi.xm.com.co/hourly",
+      "request": {
+        "MetricId": "DemaReal",
+        "Entity": "Sistema",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:57:48.561396+00:00",
+      "http_status": 200,
+      "sha256": "a28628c2456a34c3f6fef5e475958058849be84d67739b8925dd444662527127",
+      "raw_path": "DemaReal/8a9a1240fde1f1b613cd.json",
+      "bytes": 2196
+    },
+    {
+      "url": "https://servapibi.xm.com.co/hourly",
+      "request": {
+        "MetricId": "DemaOR",
+        "Entity": "Agente",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:57:49.785321+00:00",
+      "http_status": 200,
+      "sha256": "68a21162919aad95fb36342f273366fbb7bcb683ef9e333b59b0b7bb2c699717",
+      "raw_path": "DemaOR/77daf78bbdab210428cb.json",
+      "bytes": 45997
+    },
+    {
+      "url": "https://servapibi.xm.com.co/hourly",
+      "request": {
+        "MetricId": "Gene",
+        "Entity": "Sistema",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:57:50.150458+00:00",
+      "http_status": 200,
+      "sha256": "0bbc747ac92d3e9b28e18aada193e6b2677a66e4d35b6c1b1303c6bfa6f0aeb0",
+      "raw_path": "Gene/46a8c17598cdef278c48.json",
+      "bytes": 2191
+    },
+    {
+      "url": "https://servapibi.xm.com.co/hourly",
+      "request": {
+        "MetricId": "Gene",
+        "Entity": "Recurso",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:57:53.665459+00:00",
+      "http_status": 200,
+      "sha256": "8bf6d51c7af975ad026a1425f0a124d2b7db2dbfdf37867edbf96c51ee400d75",
+      "raw_path": "Gene/b34ca180e350e3e5c07d.json",
+      "bytes": 353583
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "CapEfecNeta",
+        "Entity": "Recurso",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:57:54.911283+00:00",
+      "http_status": 200,
+      "sha256": "eb2bc49bde74660fd23ba6229d8a2094d24dbd88d33d1555b66c02daf545d821",
+      "raw_path": "CapEfecNeta/627db53db46791f68c36.json",
+      "bytes": 152210
+    },
+    {
+      "url": "https://servapibi.xm.com.co/hourly",
+      "request": {
+        "MetricId": "DispoReal",
+        "Entity": "Recurso",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:58:15.114208+00:00",
+      "http_status": 200,
+      "sha256": "1ed6b6837dca71efae61ec1b89d0daa125766ba7b3899c0500542b9838142523",
+      "raw_path": "DispoReal/2dca2fad234f246eb774.json",
+      "bytes": 379967
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "VoluUtilDiarEner",
+        "Entity": "Sistema",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:58:15.740114+00:00",
+      "http_status": 200,
+      "sha256": "5871f14931550bc7875ec3c133d1ea4c3354be2aa15a100b77a6ee5cba43f0e8",
+      "raw_path": "VoluUtilDiarEner/1e7801345dfe24dd4604.json",
+      "bytes": 418
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "VoluUtilDiarEner",
+        "Entity": "Embalse",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:58:16.020788+00:00",
+      "http_status": 200,
+      "sha256": "0edead8cda657a9fc6ffbd98fef333862b36a06f0a871d5b4a8428d1f2801f3f",
+      "raw_path": "VoluUtilDiarEner/5439390d37461b0a2cd4.json",
+      "bytes": 7259
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "CapaUtilDiarEner",
+        "Entity": "Sistema",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:10.265111+00:00",
+      "http_status": 200,
+      "sha256": "3f05b74b5acb591bf3de7a3cefdc8cecb8ed4335b110ddc688696c6fbc3bee71",
+      "raw_path": "CapaUtilDiarEner/132d5b0804f2b9d987c5.json",
+      "bytes": 413
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "CapaUtilDiarEner",
+        "Entity": "Embalse",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:10.553593+00:00",
+      "http_status": 200,
+      "sha256": "5777d53adb98834a161fa4b48ec35bbb9fed09758fc006c9def62542670edee8",
+      "raw_path": "CapaUtilDiarEner/3fd18d2b499e9a4e10dc.json",
+      "bytes": 7277
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "PorcVoluUtilDiar",
+        "Entity": "Embalse",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:10.842723+00:00",
+      "http_status": 200,
+      "sha256": "cef600770b9131feefad39b794e971428ae58a204186b0e6f81d9537a15cb4ba",
+      "raw_path": "PorcVoluUtilDiar/ed229d64ec8a00980e80.json",
+      "bytes": 6700
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "AporEner",
+        "Entity": "Sistema",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:11.118424+00:00",
+      "http_status": 200,
+      "sha256": "e2e811364ae6f9ea346d4e835f1a417ae406a28ea13d8f10f30dcc827cd72d38",
+      "raw_path": "AporEner/be71e81ee84d5bcf558d.json",
+      "bytes": 392
+    },
+    {
+      "url": "https://servapibi.xm.com.co/daily",
+      "request": {
+        "MetricId": "AporEner",
+        "Entity": "Rio",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:11.415493+00:00",
+      "http_status": 200,
+      "sha256": "b91599d1d9602a2481e7edd2d14aada34e1e7d7e1779df4a80b5b76750424fdc",
+      "raw_path": "AporEner/8fc3c2e2136677fa4adc.json",
+      "bytes": 11934
+    },
+    {
+      "url": "https://servapibi.xm.com.co/hourly",
+      "request": {
+        "MetricId": "PrecBolsNaci",
+        "Entity": "Sistema",
+        "StartDate": "2023-12-31",
+        "EndDate": "2024-01-02",
+        "Filter": []
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:11.722474+00:00",
+      "http_status": 200,
+      "sha256": "7745f9cbea11ab56cd30da6af55936268c0e4527cea5cebc6d809d56715f0f21",
+      "raw_path": "PrecBolsNaci/00b86686c3c16ec76fd7.json",
+      "bytes": 1917
+    },
+    {
+      "url": "https://servapibi.xm.com.co/lists",
+      "request": {
+        "MetricId": "ListadoRecursos",
+        "Entity": "Sistema"
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:12.404882+00:00",
+      "http_status": 200,
+      "sha256": "5e01a40ed86dc4a42c3d4ab41eadf2bfc9438862038b9e21551338dd87e64caa",
+      "raw_path": "ListadoRecursos/0270858803964b0670d0.json",
+      "bytes": 714748
+    },
+    {
+      "url": "https://servapibi.xm.com.co/lists",
+      "request": {
+        "MetricId": "ListadoEmbalses",
+        "Entity": "Sistema"
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:50.119073+00:00",
+      "http_status": 200,
+      "sha256": "0cd960f7cf287b27d34c57c687258cb0c834d1d844e5c3aa95f57f836d000d28",
+      "raw_path": "ListadoEmbalses/01a3a74c2d3fd3288534.json",
+      "bytes": 4552
+    },
+    {
+      "url": "https://servapibi.xm.com.co/lists",
+      "request": {
+        "MetricId": "ListadoRios",
+        "Entity": "Sistema"
+      },
+      "retrieved_at_utc": "2026-10-13T01:59:50.288883+00:00",
+      "http_status": 200,
+      "sha256": "83128a87f43d4e795ac0c5c75c81162a14ba838df37ac39272619aecf6f2962e",
+      "raw_path": "ListadoRios/33ab661cc0c4cab0fe44.json",
+      "bytes": 6416
+    }
+  ],
+  "quality": {
+    "missing_observations": [
+      {
+        "metric": "Gene",
+        "entity": "Recurso",
+        "rows": 17112,
+        "missing_values": 3534,
+        "exact_list_duplicates_removed": 0,
+        "sha256": "12602a7fbd3d984721dd4f3597f4ea96c4cbb583e75127aadb971af7be370ca7",
+        "units": [
+          "kWh"
+        ]
+      },
+      {
+        "metric": "DispoReal",
+        "entity": "Recurso",
+        "rows": 21072,
+        "missing_values": 16409,
+        "exact_list_duplicates_removed": 0,
+        "sha256": "121677735a6b0e1843de64a029c8364d92311c31d3a36130b83bcad756b884af",
+        "units": [
+          "kW"
+        ]
+      }
+    ],
+    "exact_list_duplicates_removed": {
+      "ListadoRecursos": 2,
+      "ListadoEmbalses": 6
+    },
+    "notes": [
+      "No missing resource observations were replaced by zero.",
+      "Do not sum national totals together with their disaggregated entities."
+    ],
+    "reservoir_percentage_check": {
+      "rows_compared": 72,
+      "catalog_unit": "%",
+      "max_error_if_wire_is_fraction": 4.894781429065631e-06,
+      "max_error_if_wire_is_percent": 0.9287794624534624,
+      "interpretation": "sample behaves as fractional values despite % label",
+      "model_policy": "compute fraction from stored/useful energy, never this ambiguous field"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "Metric": {
+    "Id": "ListadoMetricas",
+    "Name": "Listado metricas API XM"
+  },
+  "Items": [
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "DemaReal",
+            "MetricName": "Demanda Real por Sistema",
+            "Entity": "Sistema",
+            "MaxDays": 31,
+            "Type": "HourlyEntities",
+            "Url": "https://servapibi.xm.com.co/hourly",
+            "Filter": "No aplica",
+            "MetricUnits": "kWh",
+            "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado P\u00fablico)"
+          }
+        }
+      ]
+    },
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "DemaReal",
+            "MetricName": "Demanda Real por Agente",
+            "Entity": "Agente",
+            "MaxDays": 31,
+            "Type": "HourlyEntities",
+            "Url": "https://servapibi.xm.com.co/hourly",
+            "Filter": "Codigo Comercializador",
+            "MetricUnits": "kWh",
+            "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado P\u00fablico)"
+          }
+        }
+      ]
+    },
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "Gene",
+            "MetricName": "Generaci\u00f3n por Sistema",
+            "Entity": "Sistema",
+            "MaxDays": 31,
+            "Type": "HourlyEntities",
+            "Url": "https://servapibi.xm.com.co/hourly",
+            "Filter": "No aplica",
+            "MetricUnits": "kWh",
+            "MetricDescription": "Generacion neta de cada una de las plantas Nacionales en sus puntos de frontera."
+          }
+        }
+      ]
+    },
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "Gene",
+            "MetricName": "Generaci\u00f3n por Recurso",
+            "Entity": "Recurso",
+            "MaxDays": 31,
+            "Type": "HourlyEntities",
+            "Url": "https://servapibi.xm.com.co/hourly",
+            "Filter": "Codigo Submercado Generaci\u00f3n",
+            "MetricUnits": "kWh",
+            "MetricDescription": "Generacion neta de cada una de las plantas Nacionales en sus puntos de frontera."
+          }
+        }
+      ]
+    },
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "VoluUtilDiarEner",
+            "MetricName": "Volumen \u00datil diario Energ\u00eda por Sistema",
+            "Entity": "Sistema",
+            "MaxDays": 31,
+            "Type": "DailyEntities",
+            "Url": "https://servapibi.xm.com.co/daily",
+            "Filter": "No aplica",
+            "MetricUnits": "kWh",
+            "MetricDescription": "Volumen almacenado por encima del Nivel Minimo Tecnico, reportado diariamente por los agentes. En % corresponde a la relacion entre el Volumen Util Diario y la Capacidad Util del Embalse"
+          }
+        }
+      ]
+    },
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "CapEfecNeta",
+            "MetricName": "Capacidad Efectiva Neta por Recurso",
+            "Entity": "Recurso",
+            "MaxDays": 31,
+            "Type": "DailyEntities",
+            "Url": "https://servapibi.xm.com.co/daily",
+            "Filter": "Codigo Submercado Generaci\u00f3n",
+            "MetricUnits": "kW",
+            "MetricDescription": "M\u00e1xima cantidad de potencia neta que puede suministrar una unidad de generaci\u00f3n en condiciones normales de operaci\u00f3n. Incluye las menores y cogeneradores"
+          }
+        }
+      ]
+    },
+    {
+      "Date": "2026-10-12",
+      "ListEntities": [
+        {
+          "Id": "Sistema",
+          "Values": {
+            "MetricId": "VoluUtilDiarEner",
+            "MetricName": "Volumen \u00datil diario Energ\u00eda por Embalse",
+            "Entity": "Embalse",
+            "MaxDays": 31,
+            "Type": "DailyEntities",
+            "Url": "https://servapibi.xm.com.co/daily",
+            "Filter": "Nombre Embalse",
+            "MetricUnits": "kWh",
+            "MetricDescription": "Volumen almacenado por encima del Nivel Minimo Tecnico, reportado diariamente por los agentes. En % corresponde a la relacion entre el Volumen Util Diario y la Capacidad Util del Embalse"
+          }
+        }
+      ]
+    }
+  ]
+}

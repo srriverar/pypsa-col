@@ -1,0 +1,30 @@
+name: test
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: pip install -e '.[workflow,climate,dev]'
+      - run: python scripts/bootstrap_sources.py
+      - run: ruff check src scripts tests
+      - run: pytest -q
+      - run: snakemake -s workflow/Snakefile --config study=config/demo.yaml --cores 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-python-${{ matrix.python }}
+          path: |
+            results/demo/
+            resources/source/inventory.json
+            resources/demo/*provenance.json

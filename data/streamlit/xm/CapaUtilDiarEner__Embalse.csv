@@ -1,0 +1,73 @@
+metric,entity,entity_code,unit,timezone,timestamp,value
+CapaUtilDiarEner,Embalse,AGREGADO BOGOTA,kWh,America/Bogota,2023-12-31,3991980321.0
+CapaUtilDiarEner,Embalse,ALTOANCHICAYA,kWh,America/Bogota,2023-12-31,37183188.0
+CapaUtilDiarEner,Embalse,AMANI,kWh,America/Bogota,2023-12-31,233645145.0
+CapaUtilDiarEner,Embalse,BETANIA,kWh,America/Bogota,2023-12-31,120614130.0
+CapaUtilDiarEner,Embalse,CALIMA1,kWh,America/Bogota,2023-12-31,219056570.0
+CapaUtilDiarEner,Embalse,CHUZA,kWh,America/Bogota,2023-12-31,958219551.0
+CapaUtilDiarEner,Embalse,EL QUIMBO,kWh,America/Bogota,2023-12-31,1073619712.0
+CapaUtilDiarEner,Embalse,ESMERALDA,kWh,America/Bogota,2023-12-31,1125093892.0
+CapaUtilDiarEner,Embalse,GUAVIO,kWh,America/Bogota,2023-12-31,1449079881.0
+CapaUtilDiarEner,Embalse,ITUANGO,kWh,America/Bogota,2023-12-31,261000000.0
+CapaUtilDiarEner,Embalse,MIRAFLORES,kWh,America/Bogota,2023-12-31,455978848.0
+CapaUtilDiarEner,Embalse,MUNA,kWh,America/Bogota,2023-12-31,54904257.0
+CapaUtilDiarEner,Embalse,PENOL,kWh,America/Bogota,2023-12-31,4120467066.0
+CapaUtilDiarEner,Embalse,PLAYAS,kWh,America/Bogota,2023-12-31,94705044.0
+CapaUtilDiarEner,Embalse,PORCE II,kWh,America/Bogota,2023-12-31,122954396.0
+CapaUtilDiarEner,Embalse,PORCE III,kWh,America/Bogota,2023-12-31,112169590.0
+CapaUtilDiarEner,Embalse,PRADO,kWh,America/Bogota,2023-12-31,89799692.0
+CapaUtilDiarEner,Embalse,PUNCHINA,kWh,America/Bogota,2023-12-31,65489112.0
+CapaUtilDiarEner,Embalse,RIOGRANDE2,kWh,America/Bogota,2023-12-31,558506232.0
+CapaUtilDiarEner,Embalse,SALVAJINA,kWh,America/Bogota,2023-12-31,529598223.0
+CapaUtilDiarEner,Embalse,SAN LORENZO,kWh,America/Bogota,2023-12-31,425142773.0
+CapaUtilDiarEner,Embalse,TOPOCORO,kWh,America/Bogota,2023-12-31,1033506628.0
+CapaUtilDiarEner,Embalse,TRONERAS,kWh,America/Bogota,2023-12-31,63847680.0
+CapaUtilDiarEner,Embalse,URRA1,kWh,America/Bogota,2023-12-31,162348906.0
+CapaUtilDiarEner,Embalse,AGREGADO BOGOTA,kWh,America/Bogota,2024-01-01,3991980321.0
+CapaUtilDiarEner,Embalse,ALTOANCHICAYA,kWh,America/Bogota,2024-01-01,37183188.0
+CapaUtilDiarEner,Embalse,AMANI,kWh,America/Bogota,2024-01-01,233645145.0
+CapaUtilDiarEner,Embalse,BETANIA,kWh,America/Bogota,2024-01-01,120614130.0
+CapaUtilDiarEner,Embalse,CALIMA1,kWh,America/Bogota,2024-01-01,219056570.0
+CapaUtilDiarEner,Embalse,CHUZA,kWh,America/Bogota,2024-01-01,958219551.0
+CapaUtilDiarEner,Embalse,EL QUIMBO,kWh,America/Bogota,2024-01-01,1073619712.0
+CapaUtilDiarEner,Embalse,ESMERALDA,kWh,America/Bogota,2024-01-01,1125093892.0
+CapaUtilDiarEner,Embalse,GUAVIO,kWh,America/Bogota,2024-01-01,1449079881.0
+CapaUtilDiarEner,Embalse,ITUANGO,kWh,America/Bogota,2024-01-01,261000000.0
+CapaUtilDiarEner,Embalse,MIRAFLORES,kWh,America/Bogota,2024-01-01,455978848.0
+CapaUtilDiarEner,Embalse,MUNA,kWh,America/Bogota,2024-01-01,54904257.0
+CapaUtilDiarEner,Embalse,PENOL,kWh,America/Bogota,2024-01-01,4120467066.0
+CapaUtilDiarEner,Embalse,PLAYAS,kWh,America/Bogota,2024-01-01,94705044.0
+CapaUtilDiarEner,Embalse,PORCE II,kWh,America/Bogota,2024-01-01,122954396.0
+CapaUtilDiarEner,Embalse,PORCE III,kWh,America/Bogota,2024-01-01,112169590.0
+CapaUtilDiarEner,Embalse,PRADO,kWh,America/Bogota,2024-01-01,89799692.0
+CapaUtilDiarEner,Embalse,PUNCHINA,kWh,America/Bogota,2024-01-01,65489112.0
+CapaUtilDiarEner,Embalse,RIOGRANDE2,kWh,America/Bogota,2024-01-01,558506232.0
+CapaUtilDiarEner,Embalse,SALVAJINA,kWh,America/Bogota,2024-01-01,529598223.0
+CapaUtilDiarEner,Embalse,SAN LORENZO,kWh,America/Bogota,2024-01-01,425142773.0
+CapaUtilDiarEner,Embalse,TOPOCORO,kWh,America/Bogota,2024-01-01,1033506628.0
+CapaUtilDiarEner,Embalse,TRONERAS,kWh,America/Bogota,2024-01-01,63847680.0
+CapaUtilDiarEner,Embalse,URRA1,kWh,America/Bogota,2024-01-01,162348906.0
+CapaUtilDiarEner,Embalse,AGREGADO BOGOTA,kWh,America/Bogota,2024-01-02,3991980321.0
+CapaUtilDiarEner,Embalse,ALTOANCHICAYA,kWh,America/Bogota,2024-01-02,37183188.0
+CapaUtilDiarEner,Embalse,AMANI,kWh,America/Bogota,2024-01-02,233645145.0
+CapaUtilDiarEner,Embalse,BETANIA,kWh,America/Bogota,2024-01-02,120614130.0
+CapaUtilDiarEner,Embalse,CALIMA1,kWh,America/Bogota,2024-01-02,219056570.0
+CapaUtilDiarEner,Embalse,CHUZA,kWh,America/Bogota,2024-01-02,958219551.0
+CapaUtilDiarEner,Embalse,EL QUIMBO,kWh,America/Bogota,2024-01-02,1073619712.0
+CapaUtilDiarEner,Embalse,ESMERALDA,kWh,America/Bogota,2024-01-02,1125093892.0
+CapaUtilDiarEner,Embalse,GUAVIO,kWh,America/Bogota,2024-01-02,1449079881.0
+CapaUtilDiarEner,Embalse,ITUANGO,kWh,America/Bogota,2024-01-02,261000000.0
+CapaUtilDiarEner,Embalse,MIRAFLORES,kWh,America/Bogota,2024-01-02,455978848.0
+CapaUtilDiarEner,Embalse,MUNA,kWh,America/Bogota,2024-01-02,54904257.0
+CapaUtilDiarEner,Embalse,PENOL,kWh,America/Bogota,2024-01-02,4120467066.0
+CapaUtilDiarEner,Embalse,PLAYAS,kWh,America/Bogota,2024-01-02,94705044.0
+CapaUtilDiarEner,Embalse,PORCE II,kWh,America/Bogota,2024-01-02,122954396.0
+CapaUtilDiarEner,Embalse,PORCE III,kWh,America/Bogota,2024-01-02,112169590.0
+CapaUtilDiarEner,Embalse,PRADO,kWh,America/Bogota,2024-01-02,89799692.0
+CapaUtilDiarEner,Embalse,PUNCHINA,kWh,America/Bogota,2024-01-02,65489112.0
+CapaUtilDiarEner,Embalse,RIOGRANDE2,kWh,America/Bogota,2024-01-02,558506232.0
+CapaUtilDiarEner,Embalse,SALVAJINA,kWh,America/Bogota,2024-01-02,529598223.0
+CapaUtilDiarEner,Embalse,SAN LORENZO,kWh,America/Bogota,2024-01-02,425142773.0
+CapaUtilDiarEner,Embalse,TOPOCORO,kWh,America/Bogota,2024-01-02,1033506628.0
+CapaUtilDiarEner,Embalse,TRONERAS,kWh,America/Bogota,2024-01-02,63847680.0
+CapaUtilDiarEner,Embalse,URRA1,kWh,America/Bogota,2024-01-02,162348906.0

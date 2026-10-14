@@ -1,0 +1,73 @@
+metric,entity,entity_code,unit,timezone,timestamp,value
+PorcVoluUtilDiar,Embalse,AGREGADO BOGOTA,%,America/Bogota,2023-12-31,0.63587
+PorcVoluUtilDiar,Embalse,ALTOANCHICAYA,%,America/Bogota,2023-12-31,0.29913
+PorcVoluUtilDiar,Embalse,AMANI,%,America/Bogota,2023-12-31,0.93088
+PorcVoluUtilDiar,Embalse,BETANIA,%,America/Bogota,2023-12-31,0.81912
+PorcVoluUtilDiar,Embalse,CALIMA1,%,America/Bogota,2023-12-31,0.74385
+PorcVoluUtilDiar,Embalse,CHUZA,%,America/Bogota,2023-12-31,0.38099
+PorcVoluUtilDiar,Embalse,EL QUIMBO,%,America/Bogota,2023-12-31,0.61937
+PorcVoluUtilDiar,Embalse,ESMERALDA,%,America/Bogota,2023-12-31,0.75474
+PorcVoluUtilDiar,Embalse,GUAVIO,%,America/Bogota,2023-12-31,0.70104
+PorcVoluUtilDiar,Embalse,ITUANGO,%,America/Bogota,2023-12-31,0.1345
+PorcVoluUtilDiar,Embalse,MIRAFLORES,%,America/Bogota,2023-12-31,0.72834
+PorcVoluUtilDiar,Embalse,MUNA,%,America/Bogota,2023-12-31,0.78629
+PorcVoluUtilDiar,Embalse,PENOL,%,America/Bogota,2023-12-31,0.79216
+PorcVoluUtilDiar,Embalse,PLAYAS,%,America/Bogota,2023-12-31,0.54377
+PorcVoluUtilDiar,Embalse,PORCE II,%,America/Bogota,2023-12-31,0.61642
+PorcVoluUtilDiar,Embalse,PORCE III,%,America/Bogota,2023-12-31,0.42647
+PorcVoluUtilDiar,Embalse,PRADO,%,America/Bogota,2023-12-31,0.59625
+PorcVoluUtilDiar,Embalse,PUNCHINA,%,America/Bogota,2023-12-31,0.648
+PorcVoluUtilDiar,Embalse,RIOGRANDE2,%,America/Bogota,2023-12-31,0.93361
+PorcVoluUtilDiar,Embalse,SALVAJINA,%,America/Bogota,2023-12-31,0.66484
+PorcVoluUtilDiar,Embalse,SAN LORENZO,%,America/Bogota,2023-12-31,0.93425
+PorcVoluUtilDiar,Embalse,TOPOCORO,%,America/Bogota,2023-12-31,0.8333
+PorcVoluUtilDiar,Embalse,TRONERAS,%,America/Bogota,2023-12-31,0.66917
+PorcVoluUtilDiar,Embalse,URRA1,%,America/Bogota,2023-12-31,0.87393
+PorcVoluUtilDiar,Embalse,AGREGADO BOGOTA,%,America/Bogota,2024-01-01,0.63474
+PorcVoluUtilDiar,Embalse,ALTOANCHICAYA,%,America/Bogota,2024-01-01,0.23737
+PorcVoluUtilDiar,Embalse,AMANI,%,America/Bogota,2024-01-01,0.93074
+PorcVoluUtilDiar,Embalse,BETANIA,%,America/Bogota,2024-01-01,0.78894
+PorcVoluUtilDiar,Embalse,CALIMA1,%,America/Bogota,2024-01-01,0.74519
+PorcVoluUtilDiar,Embalse,CHUZA,%,America/Bogota,2024-01-01,0.3784
+PorcVoluUtilDiar,Embalse,EL QUIMBO,%,America/Bogota,2024-01-01,0.61963
+PorcVoluUtilDiar,Embalse,ESMERALDA,%,America/Bogota,2024-01-01,0.75528
+PorcVoluUtilDiar,Embalse,GUAVIO,%,America/Bogota,2024-01-01,0.7054
+PorcVoluUtilDiar,Embalse,ITUANGO,%,America/Bogota,2024-01-01,0.13583
+PorcVoluUtilDiar,Embalse,MIRAFLORES,%,America/Bogota,2024-01-01,0.72192
+PorcVoluUtilDiar,Embalse,MUNA,%,America/Bogota,2024-01-01,0.75856
+PorcVoluUtilDiar,Embalse,PENOL,%,America/Bogota,2024-01-01,0.78725
+PorcVoluUtilDiar,Embalse,PLAYAS,%,America/Bogota,2024-01-01,0.48605
+PorcVoluUtilDiar,Embalse,PORCE II,%,America/Bogota,2024-01-01,0.66252
+PorcVoluUtilDiar,Embalse,PORCE III,%,America/Bogota,2024-01-01,0.4657
+PorcVoluUtilDiar,Embalse,PRADO,%,America/Bogota,2024-01-01,0.61531
+PorcVoluUtilDiar,Embalse,PUNCHINA,%,America/Bogota,2024-01-01,0.58652
+PorcVoluUtilDiar,Embalse,RIOGRANDE2,%,America/Bogota,2024-01-01,0.93816
+PorcVoluUtilDiar,Embalse,SALVAJINA,%,America/Bogota,2024-01-01,0.67619
+PorcVoluUtilDiar,Embalse,SAN LORENZO,%,America/Bogota,2024-01-01,0.93493
+PorcVoluUtilDiar,Embalse,TOPOCORO,%,America/Bogota,2024-01-01,0.8357
+PorcVoluUtilDiar,Embalse,TRONERAS,%,America/Bogota,2024-01-01,0.53781
+PorcVoluUtilDiar,Embalse,URRA1,%,America/Bogota,2024-01-01,0.87363
+PorcVoluUtilDiar,Embalse,AGREGADO BOGOTA,%,America/Bogota,2024-01-02,0.63402
+PorcVoluUtilDiar,Embalse,ALTOANCHICAYA,%,America/Bogota,2024-01-02,0.165
+PorcVoluUtilDiar,Embalse,AMANI,%,America/Bogota,2024-01-02,0.9052
+PorcVoluUtilDiar,Embalse,BETANIA,%,America/Bogota,2024-01-02,0.78753
+PorcVoluUtilDiar,Embalse,CALIMA1,%,America/Bogota,2024-01-02,0.74563
+PorcVoluUtilDiar,Embalse,CHUZA,%,America/Bogota,2024-01-02,0.37513
+PorcVoluUtilDiar,Embalse,EL QUIMBO,%,America/Bogota,2024-01-02,0.61286
+PorcVoluUtilDiar,Embalse,ESMERALDA,%,America/Bogota,2024-01-02,0.75673
+PorcVoluUtilDiar,Embalse,GUAVIO,%,America/Bogota,2024-01-02,0.70737
+PorcVoluUtilDiar,Embalse,ITUANGO,%,America/Bogota,2024-01-02,0.13343
+PorcVoluUtilDiar,Embalse,MIRAFLORES,%,America/Bogota,2024-01-02,0.71609
+PorcVoluUtilDiar,Embalse,MUNA,%,America/Bogota,2024-01-02,0.79189
+PorcVoluUtilDiar,Embalse,PENOL,%,America/Bogota,2024-01-02,0.7826
+PorcVoluUtilDiar,Embalse,PLAYAS,%,America/Bogota,2024-01-02,0.53628
+PorcVoluUtilDiar,Embalse,PORCE II,%,America/Bogota,2024-01-02,0.5025
+PorcVoluUtilDiar,Embalse,PORCE III,%,America/Bogota,2024-01-02,0.6081
+PorcVoluUtilDiar,Embalse,PRADO,%,America/Bogota,2024-01-02,0.62129
+PorcVoluUtilDiar,Embalse,PUNCHINA,%,America/Bogota,2024-01-02,0.5255
+PorcVoluUtilDiar,Embalse,RIOGRANDE2,%,America/Bogota,2024-01-02,0.91971
+PorcVoluUtilDiar,Embalse,SALVAJINA,%,America/Bogota,2024-01-02,0.68627
+PorcVoluUtilDiar,Embalse,SAN LORENZO,%,America/Bogota,2024-01-02,0.90515
+PorcVoluUtilDiar,Embalse,TOPOCORO,%,America/Bogota,2024-01-02,0.82587
+PorcVoluUtilDiar,Embalse,TRONERAS,%,America/Bogota,2024-01-02,0.66656
+PorcVoluUtilDiar,Embalse,URRA1,%,America/Bogota,2024-01-02,0.8697

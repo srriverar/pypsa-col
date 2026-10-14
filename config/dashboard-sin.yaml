@@ -1,0 +1,15 @@
+extends: default.yaml
+run:
+  id: dashboard-sin
+  label: "XM plants + DemaReal allocated with dashboard-sin-nodal subregions (declared, not official)"
+network:
+  mode: dashboard_sin
+inputs:
+  mode: dashboard_xm
+  xm_dir: data/processed/xm
+dashboard:
+  source: https://github.com/srriverar/dashboard-sin-nodal
+  commit: 514cc091932502056692d264fc0ade27cd62c786
+  app: https://dashboard-sin-nodal.streamlit.app/
+  tabs: ["Generación", "Demanda", "Explorador de planta"]
+  colors: pypsa-labs-workshop

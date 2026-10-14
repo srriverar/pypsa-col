@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: >-
+  Cite the exact PyPSA-col release/commit and its configuration and data manifest.
+  A release DOI has not been assigned. Also cite PyPSA, Linopy, Atlite, HiGHS,
+  ColombiaCongestionV2, Grid2Poster, XM and any climate/geographic datasets used.
+title: 'PyPSA-col: auditable Colombian power-system research workflows'
+version: 0.1.0
+date-released: '2026-10-12'
+type: software
+authors:
+  - name: 'PyPSA-col contributors'
+abstract: >-
+  A reproducible research scaffold using a pinned ColombiaCongestionV2 source,
+  XM data ingestion, Atlite ERA5 adapters, PyPSA/Linopy dispatch and multi-period
+  expansion, hydro drought constraints, and Grid2Poster maps. Demonstration
+  outputs are not a validated national Colombian planning model.
+keywords:
+  - PyPSA
+  - Colombia
+  - power systems
+  - capacity expansion
+  - hydroelectricity
+  - reproducibility
+license: MIT
+references:
+  - type: software
+    title: 'ColombiaCongestionV2'
+    authors:
+      - family-names: Rivera
+        given-names: Sergio
+    repository-code: 'https://github.com/srriverar/colombiacongestionV2'
+    commit: 'a6fcf7622249f555d81e293a11f05b8a6aee7c39'
+  - type: software
+    title: 'Grid2Poster'
+    authors:
+      - family-names: Augspurger
+        given-names: Tobias
+    repository-code: 'https://github.com/open-energy-transition/grid2poster'
+    commit: '69673e58b65472ba90a580c77b8ea7b902001dd0'
+  - type: software
+    title: 'API_XM'
+    authors:
+      - name: 'XM S.A. E.S.P.'
+    repository-code: 'https://github.com/EquipoAnaliticaXM/API_XM'
+    commit: 'ee9d7cf10c5e4f0210d955055d2a078f426fc439'

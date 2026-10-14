@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypsa-col"
+version = "0.1.0"
+description = "Reproducible Colombian power-system workflows using PyPSA, XM, Atlite and ColombiaCongestionV2"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = {text = "MIT for new code; see THIRD_PARTY_NOTICES.md for upstream assets and data"}
+dependencies = [
+  "pypsa==1.2.4", "linopy==0.10.0", "highspy==1.15.1", "pandas>=2.2,<3",
+  "numpy>=2,<3", "requests>=2.32,<3", "PyYAML>=6,<7", "networkx>=3.4,<4",
+  "scipy>=1.14,<2", "matplotlib>=3.9,<4", "openpyxl>=3.1,<4",
+  "geopandas>=1.0,<2", "shapely>=2,<3", "pyproj>=3.6,<4", "netCDF4>=1.7,<2"
+]
+
+[project.optional-dependencies]
+climate = ["atlite==0.7.0", "cdsapi>=0.7,<1"]
+workflow = ["snakemake==9.27.0"]
+gui = ["flask>=3,<4"]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+
+[project.scripts]
+pypsa-col = "pypsa_col.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: small HiGHS solve or source integration (offline)", "live: external service, opt in"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["external"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

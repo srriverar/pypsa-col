@@ -1,0 +1,8 @@
+extends: research.yaml
+run:
+  id: clustered18
+  label: "Reviewed 18-region transport aggregation — requires supplied official bus membership"
+network:
+  mode: clustered
+  busmap: data/user/busmap.csv
+  expected_regions: 18

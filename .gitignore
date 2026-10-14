@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.snakemake/
+.cache/
+outputs/
+results/
+data/raw/
+data/processed/
+data/streamlit/xm_last_month/
+.streamlit/secrets.toml
+*.log

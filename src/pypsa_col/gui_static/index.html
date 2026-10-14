@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PyPSA-col — Long-term Power Systems Planning in Colombia</title>
+  <style>
+    :root {
+      --navy: #081889;
+      --cyan: #18ADE5;
+      --mint: #99D0C1;
+      --orange: #F7A823;
+      --green: #7DB928;
+      --section: #0a20a8;
+      --border: #2a40c8;
+      --white: #ffffff;
+      --gold: #FCD116;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--navy);
+      color: var(--white);
+      font-family: Verdana, Geneva, sans-serif;
+      min-height: 100%;
+    }
+    body { padding: 16px 18px 40px; }
+    .header {
+      display: flex; align-items: center; gap: 22px;
+      padding-bottom: 10px; margin-bottom: 14px;
+      border-bottom: 2px solid var(--cyan);
+    }
+    .header img.logo { height: 64px; background: transparent; }
+    .header h1 {
+      font-size: 20px; color: var(--cyan); margin: 0 0 4px;
+      font-weight: 700;
+    }
+    .header p { margin: 0; font-size: 12px; color: var(--mint); }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(300px, 1fr) minmax(320px, 1.1fr) minmax(280px, 0.95fr);
+      gap: 14px;
+      align-items: start;
+    }
+    @media (max-width: 1100px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--section);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 12px 14px 14px;
+      margin-bottom: 12px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: var(--cyan);
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 7px;
+    }
+    label { font-size: 12px; text-align: right; color: #e8f4ff; }
+    input[type="text"], input[type="number"], input[type="date"], select {
+      width: 100%;
+      background: var(--mint);
+      color: var(--navy);
+      border: 0;
+      border-radius: 2px;
+      padding: 5px 7px;
+      font-family: Verdana, sans-serif;
+      font-size: 12px;
+    }
+    select:disabled { opacity: .7; }
+    .hint { font-size: 11px; color: var(--orange); font-style: italic; min-height: 16px; }
+    .list {
+      background: #061260;
+      border: 0;
+      color: white;
+      width: 100%;
+      min-height: 78px;
+      font-size: 11px;
+      padding: 6px;
+      border-radius: 2px;
+    }
+    .list option:checked, .list option:hover { background: var(--cyan); color: var(--navy); }
+    .btns { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+    button {
+      border: 0; cursor: pointer; font-family: Verdana, sans-serif; font-weight: 700;
+      border-radius: 3px;
+    }
+    .btn-orange { background: var(--orange); color: var(--navy); padding: 7px 12px; font-size: 12px; }
+    .btn-green { background: var(--green); color: var(--navy); padding: 6px 10px; font-size: 11px; }
+    .btn-run {
+      background: var(--orange); color: var(--navy);
+      width: 100%; padding: 12px; font-size: 14px; margin-top: 8px;
+    }
+    .btn-run:hover, .btn-orange:hover { background: var(--green); }
+    .check { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; font-weight: 700; margin: 8px 0; }
+    .check input { transform: scale(1.15); accent-color: var(--cyan); }
+    .sep { height: 1px; background: var(--border); margin: 8px 0; }
+    .note { font-size: 10px; color: var(--mint); font-style: italic; line-height: 1.35; }
+    .map-wrap { background: var(--navy); padding: 4px; }
+    .map-wrap img { width: 100%; display: block; background: #f7f4ef; border-radius: 2px; }
+    .map-caption { font-size: 11px; color: var(--mint); margin-top: 6px; line-height: 1.4; }
+    .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+    .progress {
+      display: none; margin-top: 10px; background: #061260; padding: 10px; font-size: 12px;
+      border: 1px solid var(--cyan);
+    }
+    .progress.show { display: block; }
+    .results a { color: var(--cyan); }
+    table.kpi { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 8px; }
+    table.kpi td { padding: 3px 4px; border-bottom: 1px solid var(--border); }
+    table.kpi td:last-child { text-align: right; color: var(--mint); }
+    .gallery {
+      display: none;
+      margin-top: 18px;
+      background: var(--section);
+      border: 1px solid var(--border);
+      padding: 16px 18px 24px;
+    }
+    .gallery.show { display: block; }
+    .gallery h2 { color: var(--cyan); font-size: 16px; margin: 18px 0 8px; }
+    .gallery h2:first-child { margin-top: 0; }
+    .gallery img.fig { width: 100%; max-width: 920px; background: #f7f4ef; border-radius: 4px; display: block; }
+    .gallery iframe.fig { width: 100%; height: 540px; border: 1px solid var(--border); background: #fff; border-radius: 4px; }
+    .gallery .legend {
+      background: #061260; padding: 10px 14px; border-left: 4px solid #CE1126;
+      font-size: 12px; line-height: 1.45; margin: 8px 0 14px;
+    }
+    .gallery a { color: var(--cyan); }
+    .epoch-block { margin-bottom: 28px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img class="logo" src="/assets/logo_pypsa_col.png" alt="PyPSA-col" />
+    <div>
+      <h1>PyPSA-col — a tool for Long-term Power Systems Planning in Colombia</h1>
+      <p>Sistema Interconectado Nacional (SIN) · XM DemaReal / CEN · malla OSM · HiGHS<br>
+         Interfaz al estilo PyPSA-CL (PELP Chile), personalizada para UPME / XM / ENSO.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- LEFT: temporal + constraints + solver (Chile left column) -->
+    <div>
+      <section class="card">
+        <h2>Configuración temporal</h2>
+        <div class="row"><label>Epoch name:</label><input id="epochName" type="text" /></div>
+        <div class="row"><label>Start date</label><input id="startDate" type="date" value="2026-01-01" /></div>
+        <div class="row"><label>End date</label><input id="endDate" type="date" value="2027-12-31" /></div>
+        <div class="row"><label>Representative years</label>
+          <select id="repYears"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select>
+        </div>
+        <div class="row"><label>Representative months</label>
+          <select id="repMonths"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>6</option><option>12</option></select>
+        </div>
+        <div class="row"><label>Representative days</label>
+          <select id="repDays"><option selected>1</option><option>4</option></select>
+        </div>
+        <div class="row"><label>Red Colombia</label>
+          <select id="network">
+            <option value="osm-mesh">OSM mesh · 251 barras (KVL)</option>
+            <option value="dashboard-sin">Dashboard-SIN · 7 nodos (KCL)</option>
+          </select>
+        </div>
+        <div style="font-size:12px;color:var(--cyan);font-weight:700;margin:8px 0 4px">Added epochs:</div>
+        <select id="epochList" class="list" size="4"></select>
+        <div class="btns">
+          <button class="btn-orange" type="button" onclick="addEpoch()">Add Epoch</button>
+          <button class="btn-green" type="button" onclick="removeEpoch()">Remove Selected</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Restricciones adicionales</h2>
+        <div class="check">
+          <input type="checkbox" id="cbLoadLost" />
+          <span>Maximum load lost [MWh/year]</span>
+        </div>
+        <div class="row"><label>MWh/year:</label><input id="maxLoadLost" type="number" value="2000" /></div>
+        <div class="sep"></div>
+        <div class="check">
+          <input type="checkbox" id="cbDiscreteTx" />
+          <span>Discrete transmission expansion</span>
+        </div>
+        <div class="sep"></div>
+        <div class="check">
+          <input type="checkbox" id="cbFnce" />
+          <span>Meta FNCE (renovables no convencionales)</span>
+        </div>
+        <div class="row"><label>FNCE %:</label><input id="fncePct" type="number" value="20" /></div>
+        <div class="sep"></div>
+        <div class="check">
+          <input type="checkbox" id="cbCoal" />
+          <span>Cierre de carbón (phase-out UPME)</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Configuración de optimización</h2>
+        <div class="row"><label>Solver name</label>
+          <select id="solver"><option selected>highs</option><option>cbc</option><option>gurobi</option><option>cplex</option></select>
+        </div>
+        <div class="row"><label>Threads</label><input id="threads" type="number" value="2" /></div>
+        <div class="row"><label>MIP gap</label><input id="mipGap" type="number" step="0.01" value="0.1" /></div>
+        <div class="check">
+          <input type="checkbox" id="linUc" checked />
+          <span style="font-weight:500">Linearized unit commitment</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- MID: scenario + queue + execution -->
+    <div>
+      <section class="card">
+        <h2>Configuración de escenario</h2>
+        <div class="row"><label style="color:var(--cyan);font-weight:700">Global scenario:</label>
+          <select id="globalScenario"></select>
+        </div>
+        <div class="hint" id="lockHint"></div>
+        <div class="row" id="customRow" style="display:none">
+          <label style="color:var(--orange);font-style:italic">Custom name:</label>
+          <input id="customName" type="text" placeholder="Nombre del escenario Otro" />
+        </div>
+        <div class="sep"></div>
+        <div class="row"><label>Demand scenario</label><select id="demand" disabled></select></div>
+        <div class="row"><label>Hydrology scenario</label><select id="hydrology" disabled></select></div>
+        <div class="row"><label>Climate scenario</label><select id="climate" disabled></select></div>
+        <div class="row"><label>Generation investment cost</label><select id="genCost" disabled></select></div>
+        <div class="row"><label>Storage investment cost</label><select id="stoCost" disabled></select></div>
+        <div class="row"><label>Fuel price scenario</label><select id="fuel" disabled></select></div>
+      </section>
+
+      <section class="card">
+        <h2>Cola de escenarios a ejecutar</h2>
+        <div style="font-size:12px;color:var(--cyan);font-weight:700;margin-bottom:4px">Queued scenarios:</div>
+        <select id="scenarioList" class="list" size="4"></select>
+        <div class="btns">
+          <button class="btn-orange" type="button" onclick="addScenario()">Add scenario to queue</button>
+          <button class="btn-green" type="button" onclick="removeScenario()">Remove Selected</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Configuración de ejecución</h2>
+        <div class="row"><label>Execution mode</label>
+          <select id="execMode"><option>Secuencial</option><option>Paralelo</option></select>
+        </div>
+        <div class="row"><label>Max parallel scenarios</label><input id="maxWorkers" type="number" value="2" /></div>
+        <div class="row"><label>RAM limit [% of total]</label><input id="ramLimit" type="number" value="85" /></div>
+        <p class="note">Paralelo: cada escenario corre en un proceso propio y los CSV se fusionan al final.
+          El siguiente escenario no se lanza si la RAM supera el límite. Ajuste Threads del solver
+          (núcleos / escenarios simultáneos). En esta GUI el despacho usa la red Colombia ya resuelta
+          (OSM 251 o SIN 7) con palancas de demanda / hidrología ENSO / combustibles.</p>
+        <button class="btn-run" type="button" onclick="runAll()">Run all scenarios</button>
+        <div class="progress" id="progressBox">
+          <div id="progressMsg">…</div>
+          <div id="resultsBox" class="results"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT: SIN map like sen_network.png -->
+    <div>
+      <div class="map-wrap">
+        <img id="sinMap" src="/assets/sin_network.png" alt="Red SIN Colombia" />
+        <p class="map-caption">
+          <span class="legend-dot" style="background:#b85716"></span> naranja = demanda &nbsp;
+          <span class="legend-dot" style="background:#155e56"></span> verde = generación<br>
+          Rojo = 500 kV · azul = 220/230 kV · contorno geoBoundaries + San Andrés.
+          Equivale al mapa <code>sen_network.png</code> de PyPSA-CL, aquí el SIN colombiano.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="gallery" id="gallery"></section>
+
+<script>
+  const state = { presets: null, epochs: [], scenarios: [], locked: false, poll: null };
+
+  function fillSelect(id, values) {
+    const el = document.getElementById(id);
+    el.innerHTML = values.map(v => `<option value="${v}">${v}</option>`).join("");
+  }
+  function suggestEpochName() {
+    const ord = ["first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth"];
+    const i = state.epochs.length;
+    document.getElementById("epochName").value = i < ord.length ? ord[i] + " epoch" : (i+1) + "th epoch";
+  }
+  function syncEnd() {
+    const start = document.getElementById("startDate").value;
+    const y = parseInt(document.getElementById("repYears").value, 10);
+    if (!start) return;
+    const yy = parseInt(start.slice(0,4), 10) + y - 1;
+    document.getElementById("endDate").value = yy + "-12-31";
+  }
+  function currentSettings() {
+    const gs = document.getElementById("globalScenario").value;
+    const label = gs === "Otro"
+      ? (document.getElementById("customName").value.trim() || "Otro")
+      : gs;
+    return {
+      global_scenario: label,
+      demand_scenario: document.getElementById("demand").value,
+      climate_scenario: document.getElementById("climate").value,
+      hydrology_scenario: document.getElementById("hydrology").value,
+      generation_investment_cost_scenario: document.getElementById("genCost").value,
+      storage_investment_cost_scenario: document.getElementById("stoCost").value,
+      fuel_price_scenario: document.getElementById("fuel").value,
+      network: document.getElementById("network").value,
+      solver_name: document.getElementById("solver").value,
+      solver_threads: parseInt(document.getElementById("threads").value, 10),
+      solver_mip_gap: parseFloat(document.getElementById("mipGap").value),
+      linearized_unit_commitment: document.getElementById("linUc").checked,
+      constraint_max_emissions: false,
+      max_emissions_MtCO2_year: 0,
+      constraint_max_load_lost: document.getElementById("cbLoadLost").checked,
+      max_load_lost_GWh_year: parseFloat(document.getElementById("maxLoadLost").value) / 1000,
+      constraint_discrete_transmission_expansion: document.getElementById("cbDiscreteTx").checked,
+      constraint_fnce: document.getElementById("cbFnce").checked,
+      fnce_pct: parseFloat(document.getElementById("fncePct").value),
+      coal_phase_out: document.getElementById("cbCoal").checked,
+    };
+  }
+  function onGlobalChange() {
+    const sel = document.getElementById("globalScenario").value;
+    const custom = document.getElementById("customRow");
+    const combos = ["demand","hydrology","climate","genCost","stoCost","fuel"];
+    if (sel === "Otro") {
+      custom.style.display = "grid";
+      combos.forEach(id => document.getElementById(id).disabled = false);
+    } else {
+      custom.style.display = "none";
+      const vals = state.presets.scenario_map[sel];
+      document.getElementById("demand").value = vals.demand;
+      document.getElementById("climate").value = vals.climate;
+      document.getElementById("hydrology").value = vals.hydrology;
+      document.getElementById("genCost").value = vals.generation_investment_cost;
+      document.getElementById("stoCost").value = vals.storage_investment_cost;
+      document.getElementById("fuel").value = vals.fuel_price;
+      combos.forEach(id => document.getElementById(id).disabled = true);
+    }
+  }
+  function renderEpochs() {
+    const el = document.getElementById("epochList");
+    el.innerHTML = state.epochs.map((ep, i) =>
+      `<option value="${i}">${i+1}. ${ep.name} | ${ep.start_date} - ${ep.end_date} | ${ep.representative_years} rep.yrs | ${ep.representative_months} rep.months | ${ep.representative_days} rep.days</option>`
+    ).join("");
+  }
+  function renderScenarios() {
+    const el = document.getElementById("scenarioList");
+    el.innerHTML = state.scenarios.map((sc, i) => {
+      const n = sc.epochs.length;
+      const first = sc.epochs[0].start_date;
+      const last = sc.epochs[sc.epochs.length-1].end_date;
+      return `<option value="${i}">${i+1}. ${sc.global_scenario} | ${n} epoch(s) | ${first} - ${last}</option>`;
+    }).join("");
+  }
+  function setLocked(locked) {
+    state.locked = locked;
+    document.getElementById("globalScenario").disabled = locked;
+    document.getElementById("lockHint").textContent = locked
+      ? "⚠  Locked after first epoch – add scenario to queue or remove all epochs to change"
+      : "";
+  }
+  function addEpoch() {
+    const name = document.getElementById("epochName").value.trim();
+    if (!name) { alert("Por favor ingrese un nombre para la época."); return; }
+    const gs = document.getElementById("globalScenario").value;
+    if (gs === "Otro" && !document.getElementById("customName").value.trim()) {
+      alert('Debe ingresar un nombre para el escenario "Otro".'); return;
+    }
+    let start = document.getElementById("startDate").value;
+    if (state.epochs.length) {
+      const prev = new Date(state.epochs[state.epochs.length-1].end_date);
+      prev.setDate(prev.getDate() + 1);
+      start = prev.toISOString().slice(0,10);
+      document.getElementById("startDate").value = start;
+    }
+    const repY = parseInt(document.getElementById("repYears").value, 10);
+    const endY = parseInt(start.slice(0,4), 10) + repY - 1;
+    const end = endY + "-12-31";
+    document.getElementById("endDate").value = end;
+    const ep = {
+      name, start_date: start, end_date: end,
+      representative_years: repY,
+      representative_months: parseInt(document.getElementById("repMonths").value, 10),
+      representative_days: parseInt(document.getElementById("repDays").value, 10),
+      ...currentSettings(),
+    };
+    state.epochs.push(ep);
+    setLocked(true);
+    const next = new Date(end); next.setDate(next.getDate()+1);
+    document.getElementById("startDate").value = next.toISOString().slice(0,10);
+    document.getElementById("repYears").value = "5";
+    document.getElementById("repMonths").value = "6";
+    syncEnd();
+    suggestEpochName();
+    renderEpochs();
+  }
+  function removeEpoch() {
+    const el = document.getElementById("epochList");
+    if (el.selectedIndex < 0) { alert("Seleccione una época para eliminar."); return; }
+    state.epochs.splice(el.selectedIndex, 1);
+    renderEpochs();
+    suggestEpochName();
+    if (!state.epochs.length) {
+      setLocked(false);
+      document.getElementById("startDate").value = "2026-01-01";
+      syncEnd();
+    }
+  }
+  function addScenario() {
+    if (!state.epochs.length) {
+      alert("Debe añadir al menos una época antes de agregar el escenario a la cola.");
+      return false;
+    }
+    const label = state.epochs[0].global_scenario;
+    if (state.scenarios.some(s => s.global_scenario === label)) {
+      alert('Ya hay un escenario "' + label + '" en la cola.\nPara agregar una variante use "Otro" con un nombre distinto.');
+      return false;
+    }
+    state.scenarios.push({ global_scenario: label, epochs: state.epochs.map(e => ({...e})) });
+    state.epochs = [];
+    renderEpochs();
+    renderScenarios();
+    setLocked(false);
+    document.getElementById("customName").value = "";
+    document.getElementById("startDate").value = "2026-01-01";
+    document.getElementById("repYears").value = "2";
+    document.getElementById("repMonths").value = "6";
+    document.getElementById("repDays").value = "1";
+    syncEnd();
+    suggestEpochName();
+    return true;
+  }
+  function removeScenario() {
+    const el = document.getElementById("scenarioList");
+    if (el.selectedIndex < 0) { alert("Seleccione un escenario para eliminar de la cola."); return; }
+    state.scenarios.splice(el.selectedIndex, 1);
+    renderScenarios();
+  }
+  async function runAll() {
+    if (state.epochs.length) {
+      if (!addScenario()) return;
+    }
+    if (!state.scenarios.length) {
+      alert("Debe agregar al menos un escenario (con al menos una época) antes de ejecutar.");
+      return;
+    }
+    const ram = parseFloat(document.getElementById("ramLimit").value);
+    const workers = parseInt(document.getElementById("maxWorkers").value, 10);
+    if (!(workers >= 1) || !(ram >= 10 && ram <= 100)) {
+      alert("Revise la configuración de ejecución:\n- Max parallel scenarios entero ≥ 1\n- RAM limit entre 10 y 100");
+      return;
+    }
+    const payload = {
+      scenarios: state.scenarios,
+      run_config: {
+        execution_mode: document.getElementById("execMode").value === "Paralelo" ? "parallel" : "sequential",
+        max_parallel_scenarios: workers,
+        ram_limit_pct: ram,
+      }
+    };
+    const box = document.getElementById("progressBox");
+    box.classList.add("show");
+    document.getElementById("progressMsg").textContent = "Enviando cola a PyPSA-col…";
+    const r = await fetch("/api/run", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+    const j = await r.json();
+    if (!r.ok) { document.getElementById("progressMsg").textContent = j.error || "Error"; return; }
+    if (state.poll) clearInterval(state.poll);
+    state.poll = setInterval(async () => {
+      const p = await fetch("/api/progress").then(x => x.json());
+      document.getElementById("progressMsg").textContent = (p.message || p.status || "…");
+      if (p.figures && p.figures.length) renderGallery(p.figures);
+      if (p.status === "done" || p.status === "error") {
+        clearInterval(state.poll);
+        let html = "";
+        if (p.outdir) html += `<p>Salidas: <code>${p.outdir}</code></p>`;
+        if (p.costs) {
+          html += "<table class='kpi'>" + p.costs.map(row =>
+            `<tr><td>${row.global_scenario} · ${row.epoch}</td><td>${row.solver_status || ""} · ${row.objective_usd ? Number(row.objective_usd).toExponential(3) : "—"} USD</td></tr>`
+          ).join("") + "</table>";
+        }
+        document.getElementById("resultsBox").innerHTML = html;
+        renderGallery(p.figures || []);
+      }
+    }, 800);
+  }
+
+  function renderGallery(figures) {
+    const box = document.getElementById("gallery");
+    if (!figures.length) { box.classList.remove("show"); return; }
+    const legend = `
+      <div class="legend">
+        <b>Cómo leer los círculos</b><br>
+        <span style="color:#f4a261">● Naranja</span> = <b>demanda</b> (DemaReal nacional partida entre barras). Todo bus tiene uno.<br>
+        <span style="color:#2a9d8f">● Verde-azulado</span> = <b>generación</b> (CEN de plantas XM colgadas a esa barra). Solo aparece donde hay planta.<br>
+        El <b>tamaño es proporcional al MW</b>. Interactivos:
+        <code>explore_load</code> = solo demanda;
+        <code>explore_capacity</code> = tartas por tecnología (colores workshop);
+        <code>explore_flow</code> = tamaño = generación, color de línea = carga %.<br>
+        Contorno geoBoundaries + San Andrés. Rojo = 500 kV, azul = 220/230 kV.
+      </div>`;
+    box.innerHTML = figures.map(fig => {
+      const h = [];
+      h.push(`<div class="epoch-block"><h2>Simulación · ${fig.epoch}</h2>${legend}`);
+      if (fig["report.html"]) h.push(`<p><a href="${fig["report.html"]}" target="_blank">Abrir informe completo (report.html)</a></p>`);
+      if (fig["colombia_map.png"]) {
+        h.push(`<h2>0. Mapa de Colombia</h2><img class="fig" src="${fig["colombia_map.png"]}" alt="Mapa de Colombia">`);
+      }
+      if (fig["lmp.png"]) {
+        h.push(`<h2>1. LMP sobre Colombia</h2><img class="fig" src="${fig["lmp.png"]}" alt="LMP">`);
+      }
+      if (fig["explore_load.html"]) {
+        h.push(`<h2>2. Carga nodal — <code>n.explore(bus_size=load)</code></h2>
+          <p><a href="${fig["explore_load.html"]}" target="_blank">Abrir mapa interactivo</a></p>
+          <iframe class="fig" src="${fig["explore_load.html"]}"></iframe>`);
+      }
+      if (fig["explore_capacity.html"]) {
+        h.push(`<h2>3. Capacidad por tecnología (tartas) — <code>n.explore(bus_size=capacities)</code></h2>
+          <p>Paleta workshop: Gas tomato, carbón dimgrey, hidro teal, solar gold, eólica royalblue.</p>
+          <p><a href="${fig["explore_capacity.html"]}" target="_blank">Abrir mapa interactivo</a></p>
+          <iframe class="fig" src="${fig["explore_capacity.html"]}"></iframe>`);
+      }
+      if (fig["explore_flow.html"]) {
+        h.push(`<h2>4. Flujos — <code>line_flow</code> + <code>line_cmap=plasma</code></h2>
+          <p><a href="${fig["explore_flow.html"]}" target="_blank">Abrir mapa interactivo</a></p>
+          <iframe class="fig" src="${fig["explore_flow.html"]}"></iframe>`);
+      }
+      if (fig["dispatch.png"]) {
+        h.push(`<h2>5. Despacho</h2><img class="fig" src="${fig["dispatch.png"]}" alt="Despacho">`);
+      }
+      h.push("</div>");
+      return h.join("");
+    }).join("");
+    box.classList.add("show");
+  }
+
+  document.getElementById("repYears").addEventListener("change", syncEnd);
+  document.getElementById("startDate").addEventListener("change", syncEnd);
+  document.getElementById("network").addEventListener("change", () => {
+    const v = document.getElementById("network").value;
+    document.getElementById("sinMap").src = v === "dashboard-sin" ? "/assets/dashboard_red.png" : "/assets/sin_network.png";
+  });
+
+  fetch("/api/presets").then(r => r.json()).then(p => {
+    state.presets = p;
+    fillSelect("globalScenario", p.all_global_names);
+    fillSelect("demand", p.scenario_names.demand);
+    fillSelect("hydrology", p.scenario_names.hydrology);
+    fillSelect("climate", p.scenario_names.climate);
+    fillSelect("genCost", p.scenario_names.generation_investment_cost);
+    fillSelect("stoCost", p.scenario_names.storage_investment_cost);
+    fillSelect("fuel", p.scenario_names.fuel_price);
+    document.getElementById("globalScenario").addEventListener("change", onGlobalChange);
+    onGlobalChange();
+    suggestEpochName();
+    syncEnd();
+  });
+</script>
+</body>
+</html>
